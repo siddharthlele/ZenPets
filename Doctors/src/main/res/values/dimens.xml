@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- PHONE / TABLET-->
+    <bool name="isTablet">false</bool>
+
+    <dimen name="empty_margin">10dp</dimen>
+    <dimen name="empty_pad">6dp</dimen>
+    <dimen name="empty_size">16sp</dimen>
+</resources>

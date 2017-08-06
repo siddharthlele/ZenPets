@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prefix">
+        <item>Dr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+        <item>Mr.</item>
+    </string-array>
+
+    <string-array name="doctor_education">
+        <item>MVMS</item>
+        <item>M. V. Sc</item>
+        <item>PhD - Veterinary Medicine</item>
+        <item>BVMS (Bachelor of Veterinary Medicine &amp; Science)</item>
+        <item>B.V.Sc &amp; A.H</item>
+    </string-array>
+</resources>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linlaDoctors"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="faw-user-md"
+                    app:iiv_size="29dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="Doctors"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaPromote"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="gmd-trending-up"
+                    app:iiv_size="29dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="Promote"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaConsult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="faw-comments-o"
+                    app:iiv_size="29dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="Consult"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linlaFeedback"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="gmd-thumb-up"
+                    app:iiv_size="29dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="Feedback"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaTips"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="gmd-description"
+                    app:iiv_size="29dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="Health Tips"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="faw-user"
+                    app:iiv_size="29dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="Profile"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#CC999999" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linlaCalendar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:adjustViewBounds="true"
+                app:iiv_color="@android:color/secondary_text_light"
+                app:iiv_icon="gmd-today"
+                app:iiv_size="29dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="11dp"
+                android:text="Calendar"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linlaPatients"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:adjustViewBounds="true"
+                app:iiv_color="@android:color/secondary_text_light"
+                app:iiv_icon="gmd-class"
+                app:iiv_size="29dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="11dp"
+                android:text="Patients"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linlaReports"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:adjustViewBounds="true"
+                app:iiv_color="@android:color/secondary_text_light"
+                app:iiv_icon="faw-bar-chart"
+                app:iiv_size="29dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="11dp"
+                android:text="Reports"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

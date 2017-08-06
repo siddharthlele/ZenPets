@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grpFragments"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashDoctors"
+            android:checked="true"
+            android:icon="@drawable/dash_home_doctors"
+            android:title="Find Doctors" />
+        <item
+            android:id="@+id/dashAdopt"
+            android:checked="false"
+            android:icon="@drawable/dash_home_adopt"
+            android:title="Adopt A Pet" />
+        <item
+            android:id="@+id/dashGroomers"
+            android:checked="false"
+            android:icon="@drawable/dash_home_groomers"
+            android:title="Find Groomers" />
+        <item
+            android:id="@+id/dashHostels"
+            android:checked="false"
+            android:icon="@drawable/dash_home_hostels"
+            android:title="Pet Hostels" />
+        <item
+            android:id="@+id/dashBoarding"
+            android:checked="false"
+            android:icon="@drawable/dash_home_boarding"
+            android:title="Home Boarding" />
+    </group>
+
+    <group
+        android:id="@+id/grpProfile"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashProfile"
+            android:checked="false"
+            android:icon="@drawable/ic_person_white_24dp"
+            android:title="Profile" />
+    </group>
+
+    <group android:id="@+id/grpActivities">
+        <item
+            android:id="@+id/dashSettings"
+            android:checked="false"
+            android:icon="@drawable/ic_settings_white_24dp"
+            android:title="Settings" />
+        <item
+            android:id="@+id/dashHelp"
+            android:checked="false"
+            android:icon="@drawable/ic_help_white_24dp"
+            android:title="Help" />
+    </group>
+</menu>

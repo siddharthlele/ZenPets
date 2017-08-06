@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#324935"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="45"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                app:iiv_color="@android:color/holo_red_light"
+                app:iiv_icon="faw-paw"
+                app:iiv_size="80dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Thin.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_app_name"
+                android:textColor="@android:color/primary_text_dark"
+                android:textSize="40sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Thin.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_app_name_for_doctors"
+                android:textColor="@android:color/primary_text_dark"
+                android:textSize="47sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="11dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtEmailAddress"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/login_edit_text_bg"
+                    android:cursorVisible="true"
+                    android:gravity="start|center"
+                    android:hint="@string/login_email_hint"
+                    android:inputType="textNoSuggestions|textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:text="siddharth.lele@gmail.com"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textColorHint="@android:color/tertiary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtPassword"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/login_edit_text_bg"
+                    android:cursorVisible="true"
+                    android:gravity="start|center"
+                    android:hint="@string/login_password_hint"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:text="12345678"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textColorHint="@android:color/tertiary_text_dark"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnSignIn"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_button_bg"
+                android:text="@string/login_sign_in"
+                android:textColor="@android:color/primary_text_dark"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtCreateAccount"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:padding="11dp"
+                    android:text="@string/login_create_account_link"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textColorLink="@android:color/holo_orange_dark"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#33DCDCDC" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtForgotPassword"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="all"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="@string/login_forgot_password_link"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textColorLink="@android:color/holo_orange_dark"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

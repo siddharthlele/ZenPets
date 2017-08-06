@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgvwClinicLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/drawer_background" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtClinicName"
+        fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="#99000000"
+        android:gravity="start"
+        android:paddingBottom="20dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingTop="20dp"
+        android:text="CLINIC NAME"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="18sp" />
+</FrameLayout>

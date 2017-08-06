@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/zen_toolbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="11dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgvwDoctorProfile"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:src="@drawable/beagle"
+            app:civ_border_color="#CCDCDCDC"
+            app:civ_border_width="4dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtDoctorName"
+            fontPath="fonts/Roboto-Regular.ttf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="11dp"
+            android:text="DOCTOR NAME"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbarSize="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="11dp"
+                    android:text="Would you recommend the doctor to your family and friends?"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="15sp" />
+
+                <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                    android:id="@+id/groupRecommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:sbg_backgroundColor="@color/card_bg"
+                    app:sbg_dividerBackgroundDrawable="@android:drawable/divider_horizontal_bright"
+                    app:sbg_dividerPadding="10dp"
+                    app:sbg_dividerRadius="10dp"
+                    app:sbg_dividerSize="1dp"
+                    app:sbg_position="0"
+                    app:sbg_radius="2dp"
+                    app:sbg_ripple="false"
+                    app:sbg_selectorColor="@color/primary"
+                    app:sbg_selectorTextColor="@android:color/primary_text_dark">
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:id="@+id/btnYes"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="YES"
+                        android:textSize="15sp" />
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:id="@+id/btnNo"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="NO"
+                        android:textSize="15sp" />
+                </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="11dp"
+                    android:text="Did your appointment start on time?"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="15sp" />
+
+                <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                    android:id="@+id/groupStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:sbg_backgroundColor="@color/card_bg"
+                    app:sbg_dividerBackgroundDrawable="@android:drawable/divider_horizontal_bright"
+                    app:sbg_dividerPadding="10dp"
+                    app:sbg_dividerRadius="10dp"
+                    app:sbg_dividerSize="1dp"
+                    app:sbg_position="0"
+                    app:sbg_radius="2dp"
+                    app:sbg_ripple="false"
+                    app:sbg_selectorColor="@color/primary"
+                    app:sbg_selectorTextColor="@android:color/primary_text_dark">
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:id="@+id/btnOnTime"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="On-time"
+                        android:textSize="12sp" />
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:id="@+id/btnTenLate"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="10 mins late"
+                        android:textSize="12sp" />
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:id="@+id/btnHalfHourLate"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="30 mins late"
+                        android:textSize="12sp" />
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:id="@+id/btnHourLate"
+                        fontPath="fonts/Roboto-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="> 1 hour late"
+                        android:textSize="12sp" />
+                </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="11dp"
+                    android:text="For what problem / treatment did you visit the Doctor?"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="15sp" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spnVisitReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="11dp"
+                    android:text="How was your experience with the Doctor?"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="15sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtExperience"
+                    fontPath="fonts/Roboto-Regular.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top|start"
+                    android:hint="Tap to start typing."
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lines="6"
+                    android:maxLines="11"
+                    android:minLines="6"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textColorHint="@android:color/secondary_text_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtTermsOfService"
+        fontPath="fonts/Roboto-Light.ttf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="By submitting the feedback, I agree to the Terms &amp; Conditions"
+        android:textColor="@android:color/primary_text_dark"
+        android:textColorLink="@android:color/holo_red_dark"
+        android:textSize="12sp" />
+
+</LinearLayout>

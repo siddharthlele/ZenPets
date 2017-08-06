@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="11dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtProblemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:text="Problem Text"
+        android:textColor="@drawable/selected_filter_bg"
+        android:textSize="15sp" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rdbtnSelectedProblem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/accent"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="5dp" />
+</LinearLayout>

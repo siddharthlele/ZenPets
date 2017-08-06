@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DASHBOARD -->
+    <string name="dash_calendar_icon">&#xf073;</string>
+    <string name="dash_patients_icon">&#xf07c;</string>
+    <string name="dash_reports_icon">&#xf201;</string>
+    <string name="dash_profiles_icon">&#xf007;</string>
+    <string name="dash_consult_icon">&#xf086;</string>
+    <string name="dash_tips_icon">&#xf0f0;</string>
+
+    <!-- CREATE ACCOUNT -->
+    <string name="location_picker">&#xE55C;</string>
+    <string name="timings_picker">&#xf017;</string>
+
+    <!-- CLINIC PROFILE -->
+    <string name="clinic_profile_edit_icon">&#xf044;</string>
+    <string name="clinic_profile_contact_icon">&#xf007;</string>
+    <string name="clinic_profile_phone_icon">&#xf095;</string>
+    <string name="clinic_profile_address_icon">&#xf0f8;</string>
+    <string name="clinic_profile_location_icon">&#xf041;</string>
+    <string name="clinic_profile_charges_icon">&#xf0d6;</string>
+    <string name="clinic_profile_timings_icon">&#xf017;</string>
+    <string name="clinic_profile_calendar_icon">&#xf073;</string>
+
+    <!-- DOCTOR PROFILE -->
+    <string name="doc_profile_exp_icon">&#xf0b1;</string>
+    <string name="doc_profile_likes_icon">&#xf087;</string>
+    <string name="doc_profile_charges_icon">&#xf0d6;</string>
+    <string name="doc_profile_timings_icon">&#xf017;</string>
+    <string name="doc_profile_reviews_icon">&#xf0e6;</string>
+    <string name="doc_profile_hospital_icon">&#xf0f8;</string>
+    <string name="doc_profile_images_icon">&#xf03e;</string>
+    <string name="doc_profile_services_icon">&#xf085;</string>
+    <string name="doc_profile_gender_icon">&#xf228;</string>
+    <string name="doc_profile_summary_icon">&#xf0f0;</string>
+</resources>

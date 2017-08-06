@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".doctors.manual.CitySelectorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/zen_toolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/linlaHeaderProgress"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:padding="2dp"
+                android:text="@string/common_loading"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listLocalities"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:cacheColorHint="@android:color/transparent"
+                android:fadingEdge="none"
+                android:persistentDrawingCache="scrolling"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@color/primary_dark"
+                android:scrollbars="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linlaEmpty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/zen_pet_graphic" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Thin.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="No location found."
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

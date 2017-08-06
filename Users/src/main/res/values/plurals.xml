@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NUMBER OF REVIEWS -->
+    <plurals name="votes">
+        <item quantity="zero">0 Votes</item>
+        <item quantity="one">1 Vote</item>
+        <item quantity="other">%d Votes</item>
+    </plurals>
+
+    <!-- NUMBER OF LIKES -->
+    <plurals name="likes">
+        <item quantity="zero">0 Likes</item>
+        <item quantity="one">1 Like</item>
+        <item quantity="other">%d Likes</item>
+    </plurals>
+</resources>

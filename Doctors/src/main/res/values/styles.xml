@@ -1,0 +1,109 @@
+<resources>
+
+    <style name="ZenPets" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_pattern</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+        <!-- CARD VIEW STYLE -->
+        <item name="cardStyle">@style/ZenPetsCards</item>
+
+        <!-- CALLIGRAPHY ATTRIBUTE -->
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+
+        <!-- POPUP MENU STYLE -->
+        <item name="popupMenuStyle">@style/myPopupMenuStyle</item>
+        <item name="android:popupMenuStyle">@style/myPopupMenuStyle</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceSmall
+        </item>
+    </style>
+
+    <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_pattern</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- CALLIGRAPHY ATTRIBUTE -->
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FloatingTextInput" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/tertiary_text_dark</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <!-- CARD VIEW STYLE -->
+    <attr name="cardStyle" format="reference" />
+
+    <style name="ZenPetsCards" parent="CardView">
+        <item name="cardBackgroundColor">@color/card_bg</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="ZenPets.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ZenPets.PopupOverlay" parent="ThemeOverlay.AppCompat" />
+
+    <style name="ZenPetsDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_pattern</item>
+        <item name="colorAccent">@color/primary</item>
+    </style>
+
+    <style name="TabStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- RADIO BUTTON -->
+    <style name="RatingBar" parent="android:style/Widget.Material.RatingBar">
+        <item name="colorControlNormal">#384e77</item>
+        <item name="colorControlActivated">#ff8800</item>
+    </style>
+
+    <!--<style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_colorNormal">@color/primary</item>
+        <item name="fab_colorPressed">@color/primary_dark</item>
+        <item name="fab_colorRipple">@color/primary_dark</item>
+    </style>-->
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- POPUP MENU STYLE -->
+    <style name="myPopupMenuStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">#444444</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmall" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- DELETE A PET PROMPT MESSAGE -->
+    <string name="pet_delete_message">Are you sure you want to delete this Pet\'s record? Pressing <b>\"Yes\"</b> will confirm the deletion and will be <b>permanent</b>. Any records, such as Medication, Vaccination record <b>will be permanently deleted</b>.</string>
+
+    <!-- DELETE A VACCINATION RECORD PROMPT MESSAGE -->
+    <string name="vaccination_delete_message">Are you sure you want to delete this Vaccination Record? Pressing <b>\"Yes\"</b> will confirm the deletion and will be <b>permanent</b></string>
+
+    <!-- DELETE AN APPOINTMENT PROMPT MESSAGE -->
+    <string name="appointment_delete_prompt">Are you sure you to delete thi Appointment? Pressing <b>\"Yes\"</b> will confirm and process this deletion. \n\nYour appointment time slot will also be freed up and made available for other Zen Pets users.</string>
+</resources>

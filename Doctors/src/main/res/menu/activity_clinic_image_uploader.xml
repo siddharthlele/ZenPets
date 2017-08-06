@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menuUpload"
+        android:icon="@drawable/ic_cloud_upload_white_24dp"
+        android:showAsAction="always"
+        android:title="Upload Images"
+        tools:ignore="AppCompatResource" />
+</menu>

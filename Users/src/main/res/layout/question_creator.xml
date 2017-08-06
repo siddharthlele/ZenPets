@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/zen_toolbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="11dp"
+                android:text="Select a Pet"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spnMyPets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="11dp"
+                android:text="Select a problem type"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spnProblem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Header (min 10 chars)"
+                android:textColorHint="@android:color/secondary_text_dark"
+                app:counterEnabled="true"
+                app:counterMaxLength="25"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Description (min 100 chars)"
+                android:textColorHint="@android:color/secondary_text_dark"
+                app:counterEnabled="true"
+                app:counterMaxLength="1000"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="top|start"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lines="8"
+                    android:maxLines="15"
+                    android:minLines="8"
+                    android:padding="11dp"
+                    android:text="This is hopefully the final test to determine if the description field still still send a null value...."
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardConsultThumb"
+                style="@style/ZenPetsCards"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imgvwConsultThumb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="5dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/empty_camera" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/chkbxAcceptTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:padding="11dp"
+        android:text="I understand and accept Zen Pet Consult's Terms &amp; Conditions"
+        android:textColor="@android:color/secondary_text_dark"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+</LinearLayout>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_apps_white_24dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                style="@style/ZenPetsCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txtAdoptionName"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:paddingBottom="5dp"
+                                android:paddingEnd="11dp"
+                                android:paddingLeft="11dp"
+                                android:paddingRight="11dp"
+                                android:paddingStart="11dp"
+                                android:paddingTop="5dp"
+                                android:text="Adoption Name"
+                                android:textColor="@android:color/primary_text_dark"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/txtGender"
+                                    fontPath="fonts/fontawesome-webfont.ttf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|top"
+                                    android:layout_margin="5dp"
+                                    android:background="#CCDCDCDC"
+                                    android:gravity="center"
+                                    android:padding="11dp"
+                                    android:text="@string/gender_male"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txtAdoptionDescription"
+                            fontPath="fonts/Roboto-Regular.ttf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="5dp"
+                            android:text="ADOPTION DESCRIPTION"
+                            android:textColor="@android:color/secondary_text_dark"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.mikepenz.iconics.view.IconicsImageView
+                                android:layout_width="47dp"
+                                android:layout_height="?attr/actionBarSize"
+                                android:adjustViewBounds="true"
+                                app:iiv_color="@android:color/tertiary_text_dark"
+                                app:iiv_icon="faw-picture-o"
+                                app:iiv_size="18dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txtNoImages"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="0dp"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="start|center"
+                                android:maxLines="1"
+                                android:paddingBottom="5dp"
+                                android:paddingEnd="11dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="11dp"
+                                android:paddingStart="5dp"
+                                android:paddingTop="5dp"
+                                android:text="No Images Uploaded"
+                                android:textColor="@android:color/tertiary_text_dark"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/listAdoptionImages"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:cacheColorHint="@android:color/transparent"
+                                android:fadingEdge="none"
+                                android:overScrollMode="never"
+                                android:persistentDrawingCache="scrolling"
+                                android:scrollbars="none"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.mikepenz.iconics.view.IconicsImageView
+                                android:layout_width="47dp"
+                                android:layout_height="47dp"
+                                android:adjustViewBounds="true"
+                                app:iiv_color="@android:color/tertiary_text_dark"
+                                app:iiv_icon="faw-clock-o"
+                                app:iiv_size="18dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txtTimeStamp"
+                                fontPath="fonts/Roboto-Regular.ttf"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:paddingBottom="5dp"
+                                android:paddingEnd="11dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="11dp"
+                                android:paddingStart="5dp"
+                                android:paddingTop="5dp"
+                                android:text="Time Stamp"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.25dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#CC999999" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linlaVaccinated"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        fontPath="fonts/Roboto-Light.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="3dp"
+                                        android:text="VACCINATED"
+                                        android:textColor="@android:color/secondary_text_dark"
+                                        android:textSize="12sp" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txtVaccinated"
+                                        fontPath="fonts/Roboto-Light.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="3dp"
+                                        android:textColor="@android:color/secondary_text_dark"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="#CC999999" />
+
+                            <LinearLayout
+                                android:id="@+id/linlaDewormed"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        fontPath="fonts/Roboto-Light.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="3dp"
+                                        android:text="DEWORMED"
+                                        android:textColor="@android:color/secondary_text_dark"
+                                        android:textSize="12sp" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txtDewormed"
+                                        fontPath="fonts/Roboto-Light.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="3dp"
+                                        android:textColor="@android:color/secondary_text_dark"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="#CC999999" />
+
+                            <LinearLayout
+                                android:id="@+id/linlaNeutered"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        fontPath="fonts/Roboto-Light.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="3dp"
+                                        android:text="NEUTERED"
+                                        android:textColor="@android:color/secondary_text_dark"
+                                        android:textSize="12sp" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txtNeutered"
+                                        fontPath="fonts/Roboto-Light.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="3dp"
+                                        android:textColor="@android:color/secondary_text_dark"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:text="Messages"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/linlaHeaderProgress"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:padding="2dp"
+                    android:text="@string/common_loading"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listMessages"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:cacheColorHint="@android:color/transparent"
+                android:fadingEdge="none"
+                android:persistentDrawingCache="scrolling"
+                android:scrollbarSize="3dp"
+                android:scrollbarThumbVertical="@color/primary_dark"
+                android:scrollbars="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linlaEmpty"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="110dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginRight="110dp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginTop="5dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/empty_graphic" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        fontPath="fonts/Bariol_Bold.otf"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="There are no messages on this adoption listing yet"
+                        android:textColor="@android:color/secondary_text_dark"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/input"
+            android:minHeight="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edtComment"
+                fontPath="fonts/Roboto-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="Type a message"
+                android:inputType="textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine"
+                android:padding="5dp"
+                android:text="still testing.."
+                android:textColor="#333333"
+                android:textColorHint="#78797d"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/imgbtnComment"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/input_circle_normal"
+            android:src="@drawable/input_send" />
+    </LinearLayout>
+</LinearLayout>

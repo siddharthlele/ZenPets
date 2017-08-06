@@ -1,0 +1,61 @@
+<resources>
+    <!-- TEST!!!!! -->
+    <string name="description">Hugh Michael Jackman is an Australian actor, singer and producer. Jackman has won international recognition for playing different roles in various film genres. \n\nHe is best known for his long-running role as Wolverine in the X-Men film series, as well as for his lead roles in the romantic-comedy fantasy Kate &amp; Leopold (2001), the action-horror film Van Helsing (2004)...\n\nHugh Michael Jackman is an Australian actor, singer and producer. Jackman has won international recognition for playing different roles in various film genres. \n\nHe is best known for his long-running role as Wolverine in the X-Men film series, as well as for his lead roles in the romantic-comedy fantasy Kate &amp; Leopold (2001), the action-horror film Van Helsing (2004)...</string>
+
+    <!-- APP NAME -->
+    <string name="app_name">Zen Pets</string>
+
+    <!-- SPLASH SCREEN -->
+    <string name="splash_title">Zen Pets</string>
+
+    <!-- PERMISSIONS -->
+    <string name="all_permissions_denied_feedback">All those permissions are needed for doing some magic</string>
+    <string name="permission_rationale_settings_button_text">SETTINGS</string>
+
+    <!-- THE API KEY'S -->
+    <string name="facebook_app_id">1584967218498481</string>
+    <string name="google_maps_key">AIzaSyCoMTYVqI-JmuJ_cTV8TDqASsc2lknnQ_Q</string>
+    <string name="google_static_map_api_key">AIzaSyD-5QWNIgI2O0F6JmmrGZyKUHUPb_YePkw</string>
+
+    <!-- DASHBOARD OPEN AND CLOSE STRINGS -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- A FEW COMMON STRINGS -->
+    <string name="common_loading">Loading....</string>
+
+    <!-- PET CREATOR -->
+    <string name="pet_creator_type_label">Select the type of Pet</string>
+    <string name="pet_creator_breed_label">Select your Pet\'s Breed</string>
+    <string name="pet_creator_name_label">Enter your Pet\'s Name</string>
+    <string name="pet_creator_gender_label">Select your Pet\'s gender</string>
+    <string name="pet_creator_gender_male">Male</string>
+    <string name="pet_creator_gender_female">Female</string>
+    <string name="pet_creator_dob_label">Select your Pet\'s date of birth</string>
+    <string name="pet_creator_image_picker_label">Select an image of your cute and cuddly</string>
+
+    <!-- USER PETS ITEM STRINGS -->
+    <string name="gender_female">&#xf221;</string>
+    <string name="gender_male">&#xf222;</string>
+    <string name="pet_item_name">PET NAME</string>
+    <string name="pet_item_age">AGE</string>
+
+    <!-- GENERIC STRINGS -->
+    <string name="generic_mb_save">Save</string>
+    <string name="generic_mb_cancel">Cancel</string>
+    <string name="generic_mb_details">Details</string>
+    <string name="generic_mb_edit">Edit</string>
+    <string name="generic_mb_delete">Delete</string>
+    <string name="generic_mb_yes">Yes</string>
+    <string name="generic_mb_no">No</string>
+
+    <!-- TEMP ICON FONTS -->
+    <string name="doc_profile_exp_icon">&#xf0b1;</string>
+    <string name="doc_profile_likes_icon">&#xf087;</string>
+    <string name="doc_profile_charges_icon">&#xf0d6;</string>
+    <string name="doc_profile_hospital_icon">&#xf0f8;</string>
+    <string name="doc_profile_timings_icon">&#xf017;</string>
+    <string name="doc_profile_reviews_icon">&#xf0e6;</string>
+    <string name="doc_profile_images_icon">&#xf03e;</string>
+    <string name="doc_profile_services_icon">&#xf085;</string>
+</resources>

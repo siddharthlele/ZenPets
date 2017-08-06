@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grpFragments"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashHome"
+            android:checked="true"
+            android:icon="@drawable/ic_dashboard_white_24dp"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/dashCalendar"
+            android:checked="false"
+            android:icon="@drawable/ic_today_white_24dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/dashPatients"
+            android:checked="false"
+            android:icon="@drawable/ic_book_white_24dp"
+            android:title="Patients" />
+        <item
+            android:id="@+id/dashReports"
+            android:checked="false"
+            android:icon="@drawable/ic_timeline_white_24dp"
+            android:title="Reports" />
+    </group>
+
+    <group
+        android:id="@+id/grpProfile"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashProfile"
+            android:checked="false"
+            android:icon="@drawable/ic_person_white_24dp"
+            android:title="Profile" />
+    </group>
+
+    <group
+        android:id="@+id/grpSocial"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashConsultations"
+            android:checked="false"
+            android:icon="@drawable/ic_message_white_24dp"
+            android:title="Consultations" />
+    </group>
+
+    <group android:id="@+id/grpActivities">
+        <item
+            android:id="@+id/dashHelp"
+            android:checked="false"
+            android:icon="@drawable/ic_help_white_24dp"
+            android:title="Help" />
+        <item
+            android:id="@+id/dashShare"
+            android:checked="false"
+            android:icon="@drawable/ic_share_white_24dp"
+            android:title="Share" />
+    </group>
+</menu>

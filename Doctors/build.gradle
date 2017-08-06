@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.zenpets.doctors"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    /** ANDROID SUPPORT LIBRARIES **/
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    /** GOOGLE PLAY SERVICES **/
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.google.android.gms:play-services-location:11.0.2'
+    compile 'com.google.android.gms:play-services-places:11.0.2'
+    compile 'com.google.android.gms:play-services-auth:11.0.2'
+
+    /** FIREBASE **/
+    compile 'com.google.firebase:firebase-auth:11.0.2'
+    compile 'com.google.firebase:firebase-storage:11.0.2'
+
+    /** CALLIGRAPHY **/
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+    /** OK HTTP **/
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+
+    /** GLIDE LIBRARY **/
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    /** THE CIRCLE IMAGE VIEW LIBRARY **/
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    /** BUTTER KNIFE **/
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    /** MATERIAL DIALOGS **/
+    compile 'com.afollestad.material-dialogs:core:0.8.5.9'
+
+    /** MATERIAL DATE PICKER **/
+    compile 'com.wdullaer:materialdatetimepicker:2.5.0'
+
+    /** TIMES SQUARE LIBRARY **/
+    compile 'com.squareup:android-times-square:1.7.2@aar'
+
+    /** THE ICONICS LIBRARY **/
+    compile "com.mikepenz:iconics-core:2.8.3@aar"
+    compile 'com.mikepenz:google-material-typeface:3.0.1.0.original@aar'
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.2@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.7.0.0@aar'
+    compile 'com.mikepenz:weather-icons-typeface:2.0.10.2@aar'
+
+    /** THE GOOGLE MAPS UTILITY **/
+    compile 'com.google.maps.android:android-maps-utils:0.4.4'
+
+    /** MULTI IMAGE PICKER **/
+    compile 'com.github.darsh2:MultipleImageSelect:v0.0.4'
+
+    /** JODA TIME LIBRARY **/
+    compile 'joda-time:joda-time:2.9.9'
+
+    /** CUSTOM RADIO BUTTON **/
+    compile 'com.github.ceryle:SegmentedButton:v1.2.2'
+
+    /** WEEK CALENDAR **/
+    compile 'noman.weekcalendar:weekcalendar:1.0.6'
+
+    /** MATERIAL CALENDAR VIEW **/
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+}
+
+apply plugin: 'com.google.gms.google-services'

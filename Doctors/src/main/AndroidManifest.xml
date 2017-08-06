@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zenpets.doctors">
+
+    <permission
+        android:name="com.zenpets.doctors.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="com.zenpets.doctors.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".utils.AppPrefs"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/ZenPets"
+        tools:replace="android:allowBackup, android:supportsRtl, android:theme">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- CREDENTIALS -->
+        <activity
+            android:name=".credentials.LoginActivity"
+            android:theme="@style/Splash"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".credentials.SignUpActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".credentials.ForgotPasswordActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- LEGAL -->
+        <activity android:name=".legal.SellerAgreementActivity" />
+        <activity android:name=".legal.PrivacyPolicyActivity" />
+
+        <!-- LANDING -->
+        <activity
+            android:name=".landing.LandingActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".landing.NewLandingActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- CLINIC -->
+        <activity
+            android:name=".creators.clinic.ClinicCreator"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".details.clinic.ClinicContainer"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".creators.clinic.images.ClinicAlbumCreator"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- DOCTOR -->
+        <activity
+            android:name=".profile.DoctorClinicsActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".modules.DoctorsProfile"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".details.doctor.DoctorDetails"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".creators.doctor.EducationRecordCreator"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- CALENDAR -->
+        <activity
+            android:name=".modules.DoctorsCalendar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- APPOINTMENTS -->
+        <activity
+            android:name=".creators.appointment.AppointmentSlotCreator"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".creators.appointment.AppointmentDetailsCreator"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".details.appointment.AppointmentDetails"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- HELPERS -->
+        <activity
+            android:name=".utils.helpers.LocationPickerActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".utils.helpers.TimingsPickerActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- GOOGLE MAPS -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- MULTI IMAGE PICKER -->
+        <activity
+            android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity"
+            android:theme="@style/MultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unverified_message">To start using Zen Pets - Doctors, you need to verify your Email Address.
+        \n\nThis is a necessary step for us to know your Email is valid and can receive important Email notifications such as appointments, notices, upgrades / updates, etc from us.
+        \n\nPress the <b>\"Send Verification Email\"</b> button to receive the verification email.
+        \n\nThe process may take a few hours to reflect in the system after verification.</string>
+
+    <string name="clinic_profile">Now that you have created your new account on Zen Pets, we need some information about your Clinic / Hospital before your profile can be made public and available for all Zen Pets users.
+        \n\nTo add the Clinic / Hospital information now, click the <b>\"ADD CLINIC DETAILS\"</b> button. To add the details later, click the \"LATER\" button.</string>
+
+    <string name="clinic_albums_message">Would you like to add some images of this Clinic?
+    \n\nWhen you add images to your Clinic, they will be displayed to all Zen Pets Users. The images will, often, also help Users choose to visit your Clinic.</string>
+
+    <string name="share_vets">I am using Zen Pets to manage my patients, appointments, reports and lots more. Zen Pets users can find my profile and make appointments too. And I think you will find it useful too. Download it from here: https://goo.gl/2k3C4d</string>
+    <string name="share_others">I am using Zen Pets to manage my pet. I can find Vets, Pet Food and loads more using it. You will find this useful too. Download it from here: https://goo.gl/YmcEBV</string>
+</resources>

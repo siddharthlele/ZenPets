@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/zen_toolbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:padding="11dp"
+                android:text="@string/pet_creator_type_label"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spnPetTypes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:padding="11dp"
+                android:text="@string/pet_creator_breed_label"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spnBreeds"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPetName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="If given, provide the Pet\'s Name"
+                android:textColorHint="@android:color/secondary_text_dark">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtPetName"
+                    fontPath="fonts/Roboto-Regular.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:padding="11dp"
+                android:text="Select the Pet\'s gender"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/groupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:sbg_backgroundColor="@color/card_bg"
+                app:sbg_dividerBackgroundDrawable="@android:drawable/divider_horizontal_bright"
+                app:sbg_dividerPadding="10dp"
+                app:sbg_dividerRadius="10dp"
+                app:sbg_dividerSize="1dp"
+                app:sbg_position="0"
+                app:sbg_radius="2dp"
+                app:sbg_ripple="false"
+                app:sbg_selectorColor="@color/primary"
+                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/btnMale"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Male"
+                    android:textSize="15sp" />
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/btnFemale"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Female"
+                    android:textSize="15sp" />
+            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="11dp"
+                android:text="Has the pet been Vaccinated? If yes, provide the details in the Description section below."
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/groupVaccination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:sbg_backgroundColor="@color/card_bg"
+                app:sbg_dividerBackgroundDrawable="@android:drawable/divider_horizontal_bright"
+                app:sbg_dividerPadding="10dp"
+                app:sbg_dividerRadius="10dp"
+                app:sbg_dividerSize="1dp"
+                app:sbg_position="0"
+                app:sbg_radius="2dp"
+                app:sbg_ripple="false"
+                app:sbg_selectorColor="@color/primary"
+                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/btnVaccinatedYes"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Yes"
+                    android:textSize="15sp" />
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/btnVaccinatedNo"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="No"
+                    android:textSize="15sp" />
+            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="11dp"
+                android:text="Has the pet been Dewormed?"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/groupDewormed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:sbg_backgroundColor="@color/card_bg"
+                app:sbg_dividerBackgroundDrawable="@android:drawable/divider_horizontal_bright"
+                app:sbg_dividerPadding="10dp"
+                app:sbg_dividerRadius="10dp"
+                app:sbg_dividerSize="1dp"
+                app:sbg_position="0"
+                app:sbg_radius="2dp"
+                app:sbg_ripple="false"
+                app:sbg_selectorColor="@color/primary"
+                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/btnDewormedYes"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Yes"
+                    android:textSize="15sp" />
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/btnDewormedNo"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="No"
+                    android:textSize="15sp" />
+            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="11dp"
+                android:text="Has the pet been Neutered?"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/groupNeutered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:sbg_backgroundColor="@color/card_bg"
+                app:sbg_dividerBackgroundDrawable="@android:drawable/divider_horizontal_bright"
+                app:sbg_dividerPadding="10dp"
+                app:sbg_dividerRadius="10dp"
+                app:sbg_dividerSize="1dp"
+                app:sbg_position="0"
+                app:sbg_radius="2dp"
+                app:sbg_ripple="false"
+                app:sbg_selectorColor="@color/primary"
+                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/groupNeuteredYes"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Yes" />
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:id="@+id/groupNeuteredNo"
+                    fontPath="fonts/Roboto-Light.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="No"
+                    android:textSize="15sp" />
+            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="11dp"
+                android:text="Tell us something about the Pet. The more you describe the Pet, the better chances of it's being adopted."
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Tap to start typing."
+                android:textColorHint="@android:color/secondary_text_dark">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtDescription"
+                    fontPath="fonts/Roboto-Regular.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="top|start"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lines="6"
+                    android:maxLines="11"
+                    android:minLines="6"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textColorHint="@android:color/tertiary_text_dark"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Roboto-Regular.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Add up to 4 images (optional)"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardImagesSelector"
+                style="@style/ZenPetsCards"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="11dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imgvwPetImages"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="6dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/empty_camera" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/gridAdoptionImages"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:cacheColorHint="@android:color/transparent"
+                android:fadingEdge="none"
+                android:persistentDrawingCache="scrolling"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@color/primary_dark"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

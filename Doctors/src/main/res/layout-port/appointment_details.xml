@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_apps_white_24dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/primary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Exo2-Medium.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="11dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:paddingStart="11dp"
+                android:paddingTop="5dp"
+                android:text="DOCTOR AND CLINIC"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgvwDoctorProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/beagle"
+                    app:civ_border_color="#DCDCDC"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtDoctorName"
+                        fontPath="fonts/Exo2-Medium.otf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:gravity="start|center"
+                        android:maxLines="1"
+                        android:text="Doctor's Name"
+                        android:textColor="@android:color/primary_text_light"
+                        android:textSize="15sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtClinicDetails"
+                        fontPath="fonts/Exo2-Regular.otf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:gravity="start|center"
+                        android:maxLines="1"
+                        android:text="Clinic Details"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Exo2-Medium.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="11dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:paddingStart="11dp"
+                android:paddingTop="5dp"
+                android:text="APPOINTMENT AT"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="11dp"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="11dp"
+                    app:iiv_color="@android:color/secondary_text_light"
+                    app:iiv_icon="@string/gmd_schedule"
+                    app:iiv_size="18dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtDateTime"
+                    fontPath="fonts/Exo2-Medium.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:text="Date and Time"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Exo2-Medium.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="11dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:paddingStart="11dp"
+                android:paddingTop="5dp"
+                android:text="APPOINTMENT BY"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgvwUserProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/beagle"
+                    app:civ_border_color="#DCDCDC"
+                    app:civ_border_width="2dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtUserName"
+                    fontPath="fonts/Exo2-Medium.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:text="User's Name"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Exo2-Medium.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="11dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:paddingStart="11dp"
+                android:paddingTop="5dp"
+                android:text="APPOINTMENT FOR"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgvwPetProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/beagle"
+                    app:civ_border_color="#DCDCDC"
+                    app:civ_border_width="2dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtPetName"
+                    fontPath="fonts/Exo2-Medium.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:padding="11dp"
+                    android:text="Pet's Name"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/Exo2-Medium.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="11dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:paddingStart="11dp"
+                android:paddingTop="5dp"
+                android:text="VISIT PURPOSE"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtVisitReason"
+                fontPath="fonts/Exo2-Medium.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="11dp"
+                android:text="Visit Reason"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

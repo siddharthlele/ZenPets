@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CLINIC IMAGE UPLOADER -->
+    <string name="clinic_images_empty">Please select at least one (1) image for your Clinic\'s Album</string>
+</resources>

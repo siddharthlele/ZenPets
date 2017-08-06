@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgvwBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imgvwBack"
+            android:layout_toRightOf="@+id/imgvwBack"
+            android:gravity="left"
+            android:padding="11dp"
+            android:text="@string/privacy_policy_title"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_last_updated"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_3"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_4"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_5"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_6"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_policy_intro_7"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_title"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_you_provide"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_you_provide_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_you_provide_para_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use_para_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use_para_3"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use_para_4"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use_para_5"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_from_service_use_para_6"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_other_sources"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_collection_info_other_sources_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_tpaa_title"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_tpaa_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_para_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_para_3"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_para_4"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_para_5"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_digital_receipts"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_use_of_info_digital_receipts_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_intro"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_3"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_4"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_5"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_6"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_sharing_info_7"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_security"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_security_intro"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_location"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_location_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_3"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_4"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_5"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_6"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_your_choices_cookies_para_7"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_prefs"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/privacy_prefs_para"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

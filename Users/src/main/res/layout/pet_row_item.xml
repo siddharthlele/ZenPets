@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgvwPetProfile"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="5dp"
+        android:src="@drawable/beagle"
+        app:civ_border_color="#DCDCDC"
+        app:civ_border_width="2dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtPetName"
+        fontPath="fonts/Roboto-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center"
+        android:padding="11dp"
+        android:textColor="@drawable/spinner_selector"
+        android:textSize="15sp" />
+</LinearLayout>

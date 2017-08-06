@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            fontPath="fonts/Roboto-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:padding="2dp"
+            android:text="@string/common_loading"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgvwProfile"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/beagle"
+            app:civ_border_color="#DCDCDC"
+            app:civ_border_width="4dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtUserName"
+                fontPath="fonts/Roboto-Medium.ttf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:padding="11dp"
+                android:text="USER NAME"
+                android:textColor="@android:color/primary_text_dark"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtViewProfile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="VIEW PROFILE"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linlaMyPets"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_icon="gmd-pets"
+                    app:iiv_size="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtMyPets"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="My Pets"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaMyAppointments"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_icon="faw-user-md"
+                    app:iiv_size="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtMyAppointments"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="My Appointments"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaMyConsultations"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_icon="gmd-forum"
+                    app:iiv_size="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtMyConsultations"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="My Consultations"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/linlaMyReminders"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_icon="faw-clock-o"
+                    app:iiv_size="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtMyReminders"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="My Reminders"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:adjustViewBounds="true"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlaMyPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_icon="faw-cog"
+                    app:iiv_size="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtMyPreferences"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="My Preferences"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    
+                    android:padding="11dp"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/linlaMyAdoptions"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_icon="faw-paw"
+                    app:iiv_size="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtMyAdoptions"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:text="My Adoption Listings"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

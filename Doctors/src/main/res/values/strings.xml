@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Zen Pets</string>
+    <string name="splash_title">Zen Pets</string>
+    <string name="splash_sub_title">for doctors</string>
+
+    <!-- A FEW COMMON STRINGS -->
+    <string name="common_loading">Loading....</string>
+
+    <!-- THE API KEY'S -->
+    <string name="google_maps_key">AIzaSyDaMpXtgExjGfyt8hHfI99z-bdU5G--dhs</string>
+
+    <!-- LOGIN SCREEN -->
+    <string name="login_app_name">Zen Pets</string>
+    <string name="login_app_name_for_doctors">for doctors</string>
+
+    <!-- DASHBOARD OPEN AND CLOSE STRINGS -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- LEGAL STRINGS -->
+    <string name="sign_up_full_terms">By continuing, I agree to the Seller Agreement and Privacy Policy</string>
+    <string name="terms_part_1">By continuing, I agree to the&#160;</string>
+    <string name="terms_part_2">Seller Agreement</string>
+    <string name="terms_part_3">&#160;and the&#160;</string>
+    <string name="terms_part_4">Privacy Policy</string>
+
+    <!-- SIGN UP / CREATE ACCOUNT TEXT -->
+    <string name="sign_up_title">CREATE AN ACCOUNT</string>
+    <string name="sign_up_sub_title">Start using Zen Pet Doctors in a few steps</string>
+    <string name="sign_up_email_address_hint">(*) Email address</string>
+    <string name="sign_up_password_hint">(*) Password (at least 8 characters)</string>
+    <string name="sign_up_confirm_password_hint">(*) Confirm the Password</string>
+    <string name="sign_up_full_name">Provide your Full Name</string>
+    <string name="sign_up_prefix_hint">1234</string>
+    <string name="sign_up_phone_number_hint">Phone Number</string>
+    <string name="sign_up_male">MALE</string>
+    <string name="sign_up_female">FEMALE</string>
+    <string name="sign_up_date_of_birth">Date of Birth</string>
+    <string name="sign_up_select_country">Select your Country</string>
+    <string name="sign_up_select_state">Select your State</string>
+    <string name="sign_up_select_city">Select the City</string>
+    <string name="sign_up_profile_picture">SELECT YOUR PROFILE PICTURE</string>
+
+    <!-- LOGIN STRINGS -->
+    <string name="login_email_hint">Email Address</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_sign_in">SIGN IN</string>
+    <string name="login_create_account_link">Create Account</string>
+    <string name="login_forgot_password_link">Forgot Password</string>
+
+    <!-- CLINIC CREATOR -->
+    <string name="clinic_name_empty">Enter the Clinic Name</string>
+    <string name="clinic_contact_person_empty">Provide the Clinic\'s Contact Person</string>
+    <string name="clinic_phone_empty">Enter the Clinic\'s Phone Number</string>
+    <string name="clinic_postal_address_empty">Provide the Clinic\'s Postal Address</string>
+    <string name="clinic_city_empty">Enter the Clinic City</string>
+    <string name="clinic_pin_code_empty">Provide the Clinic\'s Pin Code</string>
+    <string name="clinic_locality_empty">Provide the Clinic Locality</string>
+    <string name="clinic_charges_empty">Provide the Clinic\'s Charges</string>
+    <string name="clinic_logo_empty">Please select a picture for your Logo.</string>
+
+    <!-- TIMES SQUARE TESTING ONLY !!!!-->
+    <string name="Done">Done</string>
+    <string name="Customized">Customized</string>
+    <string name="Decorator">Decorator</string>
+    <string name="Hebrew">Hebrew</string>
+    <string name="Arabic">Arabic</string>
+    <string name="CustomView">Custom View</string>
+    <string name="Dialog">Dialog</string>
+    <string name="DisplayOnly">DisplayOnly</string>
+    <string name="Range">Range</string>
+    <string name="Multi">Multi</string>
+    <string name="Single">Single</string>
+    <string name="Highlight">Highlight</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="primary">#389CC6</color>
+    <color name="primary_dark">#328CB1</color>-->
+    <color name="primary">#232E42</color>
+    <color name="primary_dark">#202A3D</color>
+    <color name="accent">#ff0099cc</color>
+    <color name="card_bg">#303030</color>
+
+    <!-- SIDE BAR BG COLOR -->
+    <color name="side_bar_bg">#3D435C</color>
+
+    <!-- ICON COLORS -->
+    <color name="icons">#FFFFFF</color>
+
+    <!-- APP BG -->
+    <color name="app_bg">#212121</color>
+
+    <!-- CIRCLE BACKGROUND -->
+    <color name="semiTransparentWhite">#40FFFFFF</color>
+</resources>

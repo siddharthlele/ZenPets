@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linlaAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/tertiary_text_dark"
+                    app:iiv_icon="faw-user-md"
+                    app:iiv_size="20dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Medium.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="5dp"
+                            android:text="Make an appointment"
+                            android:textColor="@android:color/primary_text_dark"
+                            android:textSize="15sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="2dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="2dp"
+                            android:text="Find doctor, clinics, hospitals and more"
+                            android:textColor="@android:color/secondary_text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/fixed_divider_horizontal_bright" />
+
+            <LinearLayout
+                android:id="@+id/linlaAdopt"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/tertiary_text_dark"
+                    app:iiv_icon="gmd-pets"
+                    app:iiv_size="20dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Medium.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="5dp"
+                            android:text="Adopt a pet"
+                            android:textColor="@android:color/primary_text_dark"
+                            android:textSize="15sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="2dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="2dp"
+                            android:text="Adopt, get a new best friend"
+                            android:textColor="@android:color/secondary_text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/fixed_divider_horizontal_bright" />
+
+            <LinearLayout
+                android:id="@+id/linlaGroomers"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/tertiary_text_dark"
+                    app:iiv_icon="faw-scissors"
+                    app:iiv_size="20dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Medium.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="5dp"
+                            android:text="Groomers"
+                            android:textColor="@android:color/primary_text_dark"
+                            android:textSize="15sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="2dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="2dp"
+                            android:text="Bathe your pet in luxury"
+                            android:textColor="@android:color/secondary_text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/fixed_divider_horizontal_bright" />
+
+            <LinearLayout
+                android:id="@+id/linlaPetHostel"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/tertiary_text_dark"
+                    app:iiv_icon="gmd-store"
+                    app:iiv_size="20dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Medium.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="5dp"
+                            android:text="Pet Hostels"
+                            android:textColor="@android:color/primary_text_dark"
+                            android:textSize="15sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="2dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="2dp"
+                            android:text="Bathe your pet in luxury"
+                            android:textColor="@android:color/secondary_text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/fixed_divider_horizontal_bright" />
+
+            <LinearLayout
+                android:id="@+id/linlaHomeBoarding"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:adjustViewBounds="true"
+                    app:iiv_color="@android:color/tertiary_text_dark"
+                    app:iiv_icon="ion-ios-home"
+                    app:iiv_size="20dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Medium.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="5dp"
+                            android:text="Home Boarding"
+                            android:textColor="@android:color/primary_text_dark"
+                            android:textSize="15sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            fontPath="fonts/Roboto-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center"
+                            android:paddingBottom="2dp"
+                            android:paddingEnd="11dp"
+                            android:paddingLeft="11dp"
+                            android:paddingRight="11dp"
+                            android:paddingStart="11dp"
+                            android:paddingTop="2dp"
+                            android:text="For your pets, a home away from home."
+                            android:textColor="@android:color/secondary_text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_chevron_right_white_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

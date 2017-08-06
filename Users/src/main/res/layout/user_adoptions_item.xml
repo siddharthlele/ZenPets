@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linlaAdoptionContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        style="@style/ZenPetsCards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtAdoptionName"
+                        fontPath="fonts/Roboto-Regular.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="11dp"
+                        android:paddingLeft="11dp"
+                        android:paddingRight="11dp"
+                        android:paddingStart="11dp"
+                        android:paddingTop="5dp"
+                        android:text="Adoption Name"
+                        android:textColor="@android:color/primary_text_dark"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txtGender"
+                            fontPath="fonts/fontawesome-webfont.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_margin="5dp"
+                            android:background="#CCDCDCDC"
+                            android:gravity="center"
+                            android:padding="11dp"
+                            android:text="@string/gender_male"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtAdoptionDescription"
+                    fontPath="fonts/Roboto-Regular.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="11dp"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:paddingStart="11dp"
+                    android:paddingTop="5dp"
+                    android:text="ADOPTION DESCRIPTION"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|center"
+                    android:orientation="horizontal">
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:adjustViewBounds="true"
+                        android:paddingBottom="11dp"
+                        android:paddingEnd="11dp"
+                        android:paddingLeft="11dp"
+                        android:paddingRight="11dp"
+                        android:paddingStart="11dp"
+                        android:paddingTop="0dp"
+                        app:iiv_color="@android:color/secondary_text_dark"
+                        app:iiv_icon="@string/gmd_collections"
+                        app:iiv_size="20dp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtNoImages"
+                        fontPath="fonts/Roboto-Regular.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start|center"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="11dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="11dp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:text="No Images Uploaded"
+                        android:textColor="@android:color/tertiary_text_dark"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/listAdoptionImages"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:fadingEdge="none"
+                        android:overScrollMode="never"
+                        android:persistentDrawingCache="scrolling"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:adjustViewBounds="true"
+                        android:padding="11dp"
+                        app:iiv_color="@android:color/secondary_text_dark"
+                        app:iiv_icon="@string/faw_clock_o"
+                        app:iiv_size="20dp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtTimeStamp"
+                        fontPath="fonts/Roboto-Regular.ttf"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="11dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="11dp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Time Stamp"
+                        android:textColor="@android:color/secondary_text_dark"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#CC999999" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linlaVaccinated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:text="VACCINATED"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txtVaccinated"
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#CC999999" />
+
+                    <LinearLayout
+                        android:id="@+id/linlaDewormed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:text="DEWORMED"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txtDewormed"
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#CC999999" />
+
+                    <LinearLayout
+                        android:id="@+id/linlaNeutered"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:text="NEUTERED"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txtNeutered"
+                                fontPath="fonts/Roboto-Light.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:textColor="@android:color/secondary_text_dark"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

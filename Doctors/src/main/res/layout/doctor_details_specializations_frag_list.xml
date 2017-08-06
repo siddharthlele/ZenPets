@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linlaHeaderProgress"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/RobotoCondensed-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:padding="2dp"
+                android:text="@string/common_loading"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listDocSpecialization"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:cacheColorHint="@android:color/transparent"
+                android:fadingEdge="none"
+                android:persistentDrawingCache="scrolling"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@color/primary_dark"
+                android:scrollbars="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linlaEmpty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/zen_pet_graphic" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    fontPath="fonts/Roboto-Thin.ttf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/empty_margin"
+                    android:layout_marginRight="@dimen/empty_margin"
+                    android:layout_marginTop="@dimen/empty_margin"
+                    android:gravity="center"
+                    android:padding="@dimen/empty_pad"
+                    android:text="This Doctor doesn't have any Specializations added on record. Tap here to add one now."
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="@dimen/empty_size" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabNewSpecialization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+</android.support.design.widget.CoordinatorLayout>

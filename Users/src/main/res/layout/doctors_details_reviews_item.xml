@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtVisitReason"
+        fontPath="fonts/Roboto-Regular.ttf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start|center"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:paddingEnd="11dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingStart="11dp"
+        android:paddingTop="5dp"
+        android:text="Visit Reason"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="15sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtVisitExperience"
+        fontPath="fonts/Roboto-Regular.ttf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start|center"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:paddingEnd="11dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingStart="11dp"
+        android:paddingTop="5dp"
+        android:text="Visit Experience"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/imgvwLikeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:adjustViewBounds="true"
+            app:iiv_color="@android:color/holo_blue_dark"
+            app:iiv_icon="faw-thumbs-o-up"
+            app:iiv_size="12dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtUserName"
+            fontPath="fonts/Roboto-Light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="User Name"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#CC999999" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtPostedAgo"
+            fontPath="fonts/Roboto-Light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="2 Months"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgvwBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imgvwBack"
+            android:layout_toRightOf="@+id/imgvwBack"
+            android:gravity="left"
+            android:padding="11dp"
+            android:text="@string/seller_agreement_title"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_intro_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_intro_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_title"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_3"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_4"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_5"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_6"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_7"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_8"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_9"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_10"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_11"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_12"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_13"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_14"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_15"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_16"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_17"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_18"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_19"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_20"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_21"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_22"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_23"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_24"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_25"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_26"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_26a"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_26b"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_27"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_28"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_29"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_30"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_31"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_32"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_33"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_34"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_35"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-LtCn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/seller_agreement_governing_terms_36"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

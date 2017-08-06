@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/the_toolbar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        fontPath="fonts/HelveticaNeueLTW1G-MdCn.otf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="11dp"
+        android:text="SELECT YOUR TIMINGS"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/primary_dark">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Select a Clinic"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spnClinics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Sunday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxSundayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Sunday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSundayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSunMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSundayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSunMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxSundayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Sunday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSundayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSunAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSundayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSunAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Monday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxMondayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Monday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtMondayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnMonMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtMondayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnMonMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxMondayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Monday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtMondayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnMonAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtMondayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnMonAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Tuesday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxTuesdayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Tuesday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtTuesdayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnTueMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtTuesdayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnTueMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxTuesdayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Tuesday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtTuesdayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnTueAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtTuesdayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnTueAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Wednesday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxWednesdayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Wednesday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtWednesdayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnWedMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtWednesdayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnWedMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxWednesdayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Wednesday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtWednesdayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnWedAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtWednesdayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnWedAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Thursday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxThursdayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Thursday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtThursdayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnThuMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtThursdayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnThuMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxThursdayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Thursday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtThursdayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnThuAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtThursdayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnThuAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Friday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxFridayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Friday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtFridayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnFriMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtFridayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnFriMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxFridayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Friday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtFridayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnFriAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtFridayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnFriAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start|center"
+                android:padding="11dp"
+                android:text="Provide the Clinic's Saturday timings"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxSaturdayMorning"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Saturday Morning" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSaturdayMorningFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSatMorningFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSaturdayMorningTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSatMorningTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkbxSaturdayAfternoon"
+                fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="11dp"
+                android:text="Open On Saturday Afternoon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSaturdayAfternoonFrom"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSatAfternoonFrom"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtSaturdayAfternoonTo"
+                    fontPath="fonts/HelveticaNeueLTW1G-Cn.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="start|center"
+                    android:padding="11dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnSatAfternoonTo"
+                    fontPath="fonts/fontawesome-webfont.ttf"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="11dp"
+                    android:text="@string/timings_picker"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
