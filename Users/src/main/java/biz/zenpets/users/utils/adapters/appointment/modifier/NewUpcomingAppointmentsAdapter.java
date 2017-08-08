@@ -1,8 +1,6 @@
 package biz.zenpets.users.utils.adapters.appointment.modifier;
 
 import android.app.Activity;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatTextView;
@@ -176,17 +174,6 @@ public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpco
             txtAppointmentLocation = (AppCompatTextView) v.findViewById(R.id.txtAppointmentLocation);
             txtAppointmentDistance = (AppCompatTextView) v.findViewById(R.id.txtAppointmentDistance);
             imgvwAppointmentOptions = (IconicsImageView) v.findViewById(R.id.imgvwAppointmentOptions);
-        }
-    }
-
-    /** CHECK IF GOOGLE MAPS IS INSTALLED **/
-    @SuppressWarnings("unused")
-    private boolean isGoogleMapsInstalled() {
-        try {
-            ApplicationInfo info = activity.getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0 );
-            return true;
-        } catch(PackageManager.NameNotFoundException e) {
-            return false;
         }
     }
 
