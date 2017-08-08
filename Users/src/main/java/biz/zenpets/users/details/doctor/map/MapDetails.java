@@ -17,6 +17,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -155,12 +156,10 @@ public class MapDetails extends AppCompatActivity implements
 
     @Override
     public void onConnectionSuspended(int i) {
-
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
     }
 
     @Override
@@ -236,7 +235,7 @@ public class MapDetails extends AppCompatActivity implements
             }
 
             data = sb.toString();
-//            Log.e("downloadUrl", data.toString());
+            Log.e("downloadUrl", data.toString());
             br.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -259,7 +258,7 @@ public class MapDetails extends AppCompatActivity implements
             try {
                 // Fetching the data from web service
                 data = downloadUrl(url[0]);
-//                Log.e("Background Task data", data.toString());
+                Log.e("Background Task data", data.toString());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -291,6 +290,7 @@ public class MapDetails extends AppCompatActivity implements
 
             try {
                 jObject = new JSONObject(jsonData[0]);
+                Log.e("JO", String.valueOf(jObject));
                 DataParser parser = new DataParser();
 
                 JSONArray array = jObject.getJSONArray("routes");

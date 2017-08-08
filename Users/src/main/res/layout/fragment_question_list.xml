@@ -15,18 +15,21 @@
             android:id="@+id/linlaFilter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                android:id="@+id/txtFilter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
                 android:padding="11dp"
                 android:text="Filter questions"
                 android:textColor="@android:color/primary_text_dark"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="wrap_content"

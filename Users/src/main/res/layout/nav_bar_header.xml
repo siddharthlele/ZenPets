@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp">
 
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/imgvwUserProfile"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/drawer_background" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgvwPetProfile"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:elevation="4dp"
+        android:src="@drawable/beagle"
+        app:civ_border_color="@color/semiTransparentWhite"
+        app:civ_border_width="1dp" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/txtUserName"
-        fontPath="fonts/Roboto-Regular.ttf"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:background="#99000000"
-        android:gravity="start"
-        android:paddingBottom="20dp"
+        android:fontFamily="@string/fontMedium"
+        android:gravity="start|center"
+        android:paddingBottom="5dp"
+        android:paddingEnd="11dp"
         android:paddingLeft="11dp"
         android:paddingRight="11dp"
-        android:paddingTop="20dp"
+        android:paddingStart="11dp"
+        android:paddingTop="5dp"
         android:text="USER NAME"
         android:textColor="@android:color/primary_text_dark"
-        android:textSize="18sp" />
-</FrameLayout>
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>

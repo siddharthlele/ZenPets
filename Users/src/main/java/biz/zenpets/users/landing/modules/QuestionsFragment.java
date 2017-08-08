@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -47,28 +47,35 @@ import okhttp3.Response;
 
 public class QuestionsFragment extends Fragment {
 
-    /** THE PROBLEM ID STRING TO FILTER CONSULTATION QUESTIONS **/
+    /** THE SELECTED PROBLEM ID (FOR FILTERING THE LIST OF QUESTIONS) **/
     private String PROBLEM_ID = null;
+    String PROBLEM_TEXT = null;
 
     /** THE CONSULTATIONS ADAPTER AND ARRAY LIST **/
     private QuestionsAdapter adapter;
     private final ArrayList<QuestionsData> arrConsultations = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
+    @BindView(R.id.txtFilter) AppCompatTextView txtFilter;
     @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
     @BindView(R.id.listConsult) RecyclerView listConsult;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
+
+    /** SHOW THE FILTERS FOR FILTERING CONSULTATION QUESTIONS **/
+    @OnClick(R.id.linlaFilter) void showFilters()   {
+        Intent intent = new Intent(getActivity(), FilterQuestionsActivity.class);
+        if (PROBLEM_ID != null) {
+            intent.putExtra("PROBLEM_ID", PROBLEM_ID);
+            startActivityForResult(intent, 102);
+        } else {
+            startActivityForResult(intent, 102);
+        }
+    }
 
     /** ADD A NEW CONSULTATION QUESTION **/
     @OnClick(R.id.btnAskQuestion) void newConsultation()    {
         Intent intent = new Intent(getActivity(), QuestionCreator.class);
         startActivityForResult(intent, 101);
-    }
-
-    /** SHOW THE FILTERS FOR FILTERING CONSULTATION QUESTIONS **/
-    @OnClick(R.id.linlaFilter) void showFilters()   {
-        Intent intent = new Intent(getActivity(), FilterQuestionsActivity.class);
-        startActivityForResult(intent, 102);
     }
 
     @Override
@@ -131,7 +138,7 @@ public class QuestionsFragment extends Fragment {
                 builder.addQueryParameter("problemID", PROBLEM_ID);
             }
             String FINAL_URL = builder.build().toString();
-            Log.e("QUESTIONS", FINAL_URL);
+//            Log.e("QUESTIONS", FINAL_URL);
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url(FINAL_URL)
@@ -266,11 +273,33 @@ public class QuestionsFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == Activity.RESULT_OK && requestCode == 102) {
+        if (resultCode == Activity.RESULT_OK && requestCode == 101) {
+            /* CLEAR THE ARRAY LIST */
+            arrConsultations.clear();
+
+            /* FETCH LIST OF CONSULTATIONS */
+            new fetchConsultations().execute();
+
+        } else if (resultCode == Activity.RESULT_OK && requestCode == 102)  {
             Bundle bundle = data.getExtras();
             if (bundle.containsKey("PROBLEM_ID")) {
                 PROBLEM_ID = bundle.getString("PROBLEM_ID");
-                if (PROBLEM_ID != null) {
+                PROBLEM_TEXT = bundle.getString("PROBLEM_TEXT");
+                if (PROBLEM_ID != null && PROBLEM_TEXT != null) {
+                    /* SET THE PROBLEM TYPE */
+                    txtFilter.setText(PROBLEM_TEXT);
+
+                    /* CLEAR THE ARRAY LIST */
+                    arrConsultations.clear();
+
+                    /* FETCH LIST OF CONSULTATIONS */
+                    new fetchConsultations().execute();
+                } else {
+                    /* EXPLICITLY MARK THE PROBLEM ID "NULL" */
+                    PROBLEM_ID = null;
+
+                    /* SET THE PROBLEM TYPE TO THE DEFAULT "FILTER" */
+                    txtFilter.setText("Filter Questions");
 
                     /* CLEAR THE ARRAY LIST */
                     arrConsultations.clear();

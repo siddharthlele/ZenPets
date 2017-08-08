@@ -12,7 +12,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -102,7 +101,7 @@ public class LandingActivity extends AppCompatActivity {
             HttpUrl.Builder builder = HttpUrl.parse(URL_USER_DETAILS).newBuilder();
             builder.addQueryParameter("userAuthID", user.getUid());
             String FINAL_URL = builder.build().toString();
-            Log.e("USER PROFILE", FINAL_URL);
+//            Log.e("USER PROFILE", FINAL_URL);
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url(FINAL_URL)

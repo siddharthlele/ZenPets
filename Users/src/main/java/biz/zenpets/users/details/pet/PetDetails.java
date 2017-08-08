@@ -13,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -128,7 +127,7 @@ public class PetDetails extends AppCompatActivity {
             HttpUrl.Builder builder = HttpUrl.parse(URL_PET_DETAILS).newBuilder();
             builder.addQueryParameter("petID", PET_ID);
             String FINAL_URL = builder.build().toString();
-            Log.e("PET DETAILS", FINAL_URL);
+//            Log.e("PET DETAILS", FINAL_URL);
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url(FINAL_URL)

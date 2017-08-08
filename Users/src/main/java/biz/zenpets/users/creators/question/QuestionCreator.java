@@ -24,7 +24,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -70,7 +69,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class QuestionCreator extends AppCompatActivity {
 
@@ -278,10 +276,6 @@ public class QuestionCreator extends AppCompatActivity {
             dialog.setIndeterminate(false);
             dialog.setCancelable(false);
             dialog.show();
-
-            Log.e("PROBLEM", PROBLEM_ID);
-            Log.e("TITLE", CONSULTATION_TITLE);
-            Log.e("Description", CONSULTATION_DESCRIPTION);
         }
 
         @Override

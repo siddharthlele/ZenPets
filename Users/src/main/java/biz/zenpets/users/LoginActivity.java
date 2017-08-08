@@ -40,6 +40,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 import biz.zenpets.users.landing.LandingActivity;
+import biz.zenpets.users.landing.NewLandingActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

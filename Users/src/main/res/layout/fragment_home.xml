@@ -272,7 +272,7 @@
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
                     app:iiv_color="@android:color/tertiary_text_dark"
-                    app:iiv_icon="gmd-store"
+                    app:iiv_icon="@string/gmd_store"
                     app:iiv_size="20dp" />
 
                 <LinearLayout

@@ -202,7 +202,7 @@
                         android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:padding="3dp"
-                        android:text="Appointment Date"
+                        android:text="Appointment Time"
                         android:textColor="@android:color/secondary_text_dark"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -232,6 +232,7 @@
                         app:iiv_size="16dp" />
 
                     <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView"
                         fontPath="fonts/Roboto-Medium.ttf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

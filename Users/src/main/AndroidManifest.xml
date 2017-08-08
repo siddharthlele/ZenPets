@@ -41,6 +41,9 @@
         <activity
             android:name=".landing.LandingActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".landing.NewLandingActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- PROFILE -->
         <activity

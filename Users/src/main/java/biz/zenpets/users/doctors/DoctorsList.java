@@ -553,6 +553,8 @@ public class DoctorsList extends AppCompatActivity implements
         currentLocation = location;
         currentLocation.setLatitude(location.getLatitude());
         currentLocation.setLongitude(location.getLongitude());
+        Log.e("LATITUDE", String.valueOf(currentLocation.getLatitude()));
+        Log.e("LONGITUDE", String.valueOf(currentLocation.getLongitude()));
 
         Double lat = 18.5158916;
         Double lng = 73.8351813;
@@ -564,7 +566,7 @@ public class DoctorsList extends AppCompatActivity implements
             if (addresses.size() > 0)   {
                 DETECTED_CITY = addresses.get(0).getLocality();
                 DETECTED_LOCALITY = addresses.get(0).getSubLocality();
-                Log.e("LOCALITY", DETECTED_LOCALITY);
+//                Log.e("LOCALITY", DETECTED_LOCALITY);
                 Toast.makeText(getApplicationContext(), "LOCALITY: " + DETECTED_LOCALITY, Toast.LENGTH_LONG).show();
 
                 if (DETECTED_CITY != null)  {

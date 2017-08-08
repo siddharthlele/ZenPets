@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import biz.zenpets.users.landing.LandingActivity;
+import biz.zenpets.users.landing.NewLandingActivity;
 import biz.zenpets.users.utils.AppPrefs;
 import butterknife.BindView;
 import butterknife.ButterKnife;

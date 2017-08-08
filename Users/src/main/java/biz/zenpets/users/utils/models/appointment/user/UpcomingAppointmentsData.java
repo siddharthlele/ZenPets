@@ -10,6 +10,9 @@ public class UpcomingAppointmentsData {
     private String clinicID = null;
     private String clinicName = null;
     private String clinicAddress = null;
+    private String cityName = null;
+    private String localityName = null;
+    private String distanceToClinic = null;
     private Double clinicLatitude = null;
     private Double clinicLongitude = null;
     private String petID = null;
@@ -82,6 +85,30 @@ public class UpcomingAppointmentsData {
 
     public void setClinicAddress(String clinicAddress) {
         this.clinicAddress = clinicAddress;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public String getLocalityName() {
+        return localityName;
+    }
+
+    public void setLocalityName(String localityName) {
+        this.localityName = localityName;
+    }
+
+    public String getDistanceToClinic() {
+        return distanceToClinic;
+    }
+
+    public void setDistanceToClinic(String distanceToClinic) {
+        this.distanceToClinic = distanceToClinic;
     }
 
     public Double getClinicLatitude() {
