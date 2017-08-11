@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+    <!--<android.support.v7.widget.Toolbar
         android:id="@+id/myToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,9 @@
         app:contentInsetStartWithNavigation="0dp"
         app:navigationIcon="@drawable/ic_apps_white_24dp"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:titleTextAppearance="@style/Toolbar.TitleText" />
+        app:titleTextAppearance="@style/Toolbar.TitleText" />-->
+
+    <include layout="@layout/zen_toolbar" />
 
     <FrameLayout
         android:id="@+id/mainContent"

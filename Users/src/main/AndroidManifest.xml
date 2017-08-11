@@ -28,6 +28,7 @@
         tools:replace="android:allowBackup, android:supportsRtl, android:theme">
         <activity
             android:name="biz.zenpets.users.SplashScreen"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,120 +38,157 @@
         </activity>
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".landing.LandingActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".landing.NewLandingActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- PROFILE -->
         <activity
             android:name=".profile.ProfileDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".modifiers.profile.ProfileEditor"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- DOCTOR -->
         <activity
             android:name=".doctors.DoctorsList"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".doctors.manual.CountrySelectorActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".doctors.manual.StateSelectorActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".doctors.manual.CitySelectorActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".utils.helpers.doctors.FilterDoctorsActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.doctor.DoctorDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.doctor.map.MapDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.doctor.images.ClinicGalleryActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.doctor.reviews.DoctorReviews"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- APPOINTMENTS -->
         <activity
             android:name=".creators.appointment.AppointmentSlotCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".creators.appointment.AppointmentDetailsCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".profile.appointments.UserAppointments"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".details.appointment.AppointmentDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".modifiers.appointment.AppointmentSlotEditor"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- FEEDBACK / REVIEW -->
         <activity
             android:name=".creators.feedback.FeedbackCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- PETS -->
         <activity
             android:name=".profile.pets.UserPets"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".creators.pet.PetCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.pet.PetDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.pet.NewPetDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- VACCINATIONS -->
         <activity
             android:name=".creators.pet.VaccinationCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- ADOPTIONS -->
         <activity
             android:name=".adoptions.AdoptionsList"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.adoption.AdoptionDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".adoptions.images.AdoptionGalleryActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".profile.adoptions.UserAdoptions"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".creators.adoption.AdoptionCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- CONSULTATIONS -->
         <activity
             android:name=".creators.question.QuestionCreator"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".details.questions.QuestionDetails"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".profile.questions.UserQuestions"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- HELPERS -->
         <activity
             android:name=".utils.helpers.questions.FilterQuestionsActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <!-- FOR THE FACEBOOK SDK (LOGIN) -->

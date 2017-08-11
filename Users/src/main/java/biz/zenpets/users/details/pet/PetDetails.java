@@ -407,6 +407,7 @@ public class PetDetails extends AppCompatActivity {
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         listVaccinations.setLayoutManager(manager);
         listVaccinations.setHasFixedSize(true);
+        listVaccinations.setNestedScrollingEnabled(false);
         listVaccinations.setAdapter(vaccinationsAdapter);
     }
 

@@ -1,6 +1,7 @@
-package biz.zenpets.users.utils.adapters.appointment.modifier;
+package biz.zenpets.users.utils.adapters.appointment.user;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatTextView;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -25,6 +27,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import biz.zenpets.users.R;
+import biz.zenpets.users.details.appointment.AppointmentDetails;
 import biz.zenpets.users.utils.models.appointment.user.UpcomingAppointmentsData;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -34,7 +37,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpcomingAppointmentsAdapter.SlotsVH> {
+public class UpcomingAppointmentsAdapter extends RecyclerView.Adapter<UpcomingAppointmentsAdapter.AppointmentsVH> {
 
     /** AN ACTIVITY INSTANCE **/
     private final Activity activity;
@@ -42,7 +45,7 @@ public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpco
     /** ARRAYLIST TO GET DATA FROM THE ACTIVITY **/
     private final ArrayList<UpcomingAppointmentsData> arrAppointments;
 
-    public NewUpcomingAppointmentsAdapter(Activity activity, ArrayList<UpcomingAppointmentsData> arrAppointments) {
+    public UpcomingAppointmentsAdapter(Activity activity, ArrayList<UpcomingAppointmentsData> arrAppointments) {
 
         /* CAST THE ACTIVITY IN THE GLOBAL ACTIVITY INSTANCE */
         this.activity = activity;
@@ -57,7 +60,7 @@ public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpco
     }
 
     @Override
-    public void onBindViewHolder(final SlotsVH holder, int position) {
+    public void onBindViewHolder(final UpcomingAppointmentsAdapter.AppointmentsVH holder, int position) {
         final UpcomingAppointmentsData data = arrAppointments.get(position);
 
         /* SET THE APPOINTMENT DATE */
@@ -80,6 +83,11 @@ public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpco
             holder.txtClinicName.setText(data.getClinicName());
         }
 
+        /* SET THE VISIT REASON */
+        if (data.getVisitReason() != null)  {
+            holder.txtVisitReason.setText("Visiting for \"" + data.getVisitReason() + "\"");
+        }
+
         /* SET THE CLINIC CITY AND LOCALITY */
         if (data.getCityName() != null && data.getLocalityName() != null)   {
             holder.txtAppointmentLocation.setText(data.getLocalityName() + ", " + data.getCityName());
@@ -89,6 +97,16 @@ public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpco
         if (data.getDistanceToClinic() != null) {
             holder.txtAppointmentDistance.setText(data.getDistanceToClinic());
         }
+
+        /* SHOW THE APPOINTMENT DETAILS */
+        holder.linlaAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, AppointmentDetails.class);
+                intent.putExtra("APPOINTMENT_ID", data.getAppointmentID());
+                activity.startActivity(intent);
+            }
+        });
 
         /* SHOW THE APPOINTMENT POPUP MENU */
         holder.imgvwAppointmentOptions.setOnClickListener(new View.OnClickListener() {
@@ -147,30 +165,34 @@ public class NewUpcomingAppointmentsAdapter extends RecyclerView.Adapter<NewUpco
     }
 
     @Override
-    public SlotsVH onCreateViewHolder(ViewGroup parent, int i) {
+    public UpcomingAppointmentsAdapter.AppointmentsVH onCreateViewHolder(ViewGroup parent, int i) {
 
         View itemView = LayoutInflater.
                 from(parent.getContext()).
-                inflate(R.layout.user_appointments_upcoming_item_new, parent, false);
+                inflate(R.layout.user_appointments_upcoming_item, parent, false);
 
-        return new SlotsVH(itemView);
+        return new UpcomingAppointmentsAdapter.AppointmentsVH(itemView);
     }
 
-    class SlotsVH extends RecyclerView.ViewHolder	{
+    class AppointmentsVH extends RecyclerView.ViewHolder	{
+        LinearLayout linlaAppointment;
         AppCompatTextView txtAppointmentDate;
         AppCompatTextView txtAppointmentTime;
         AppCompatTextView txtDoctorName;
         AppCompatTextView txtClinicName;
+        AppCompatTextView txtVisitReason;
         AppCompatTextView txtAppointmentLocation;
         AppCompatTextView txtAppointmentDistance;
         IconicsImageView imgvwAppointmentOptions;
 
-        SlotsVH (View v) {
+        AppointmentsVH (View v) {
             super(v);
+            linlaAppointment = (LinearLayout) v.findViewById(R.id.linlaAppointment);
             txtAppointmentDate = (AppCompatTextView) v.findViewById(R.id.txtAppointmentDate);
             txtAppointmentTime = (AppCompatTextView) v.findViewById(R.id.txtAppointmentTime);
             txtDoctorName = (AppCompatTextView) v.findViewById(R.id.txtDoctorName);
             txtClinicName = (AppCompatTextView) v.findViewById(R.id.txtClinicName);
+            txtVisitReason = (AppCompatTextView) v.findViewById(R.id.txtVisitReason);
             txtAppointmentLocation = (AppCompatTextView) v.findViewById(R.id.txtAppointmentLocation);
             txtAppointmentDistance = (AppCompatTextView) v.findViewById(R.id.txtAppointmentDistance);
             imgvwAppointmentOptions = (IconicsImageView) v.findViewById(R.id.imgvwAppointmentOptions);

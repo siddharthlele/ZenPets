@@ -571,6 +571,12 @@ public class AdoptionDetails extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
+            /* INSTANTIATE THE ADOPTION MESSAGES ADAPTER */
+            messagesAdapter = new AdoptionMessagesAdapter(AdoptionDetails.this, arrMessages);
+
+            /* SET THE ADAPTER TO THE RECYCLER VIEW */
+            listMessages.setAdapter(messagesAdapter);
+
             /* HIDE THE PROGRESS AFTER FETCHING THE MESSAGES */
             linlaHeaderProgress.setVisibility(View.GONE);
         }
@@ -666,8 +672,10 @@ public class AdoptionDetails extends AppCompatActivity {
         /* CONFIGURE THE MESSAGES RECYCLER VIEW */
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
+        manager.setAutoMeasureEnabled(true);
         listMessages.setLayoutManager(manager);
         listMessages.setHasFixedSize(true);
+        listMessages.setNestedScrollingEnabled(false);
         listMessages.setAdapter(messagesAdapter);
     }
 

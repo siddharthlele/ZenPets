@@ -1,6 +1,7 @@
 package biz.zenpets.users.doctors;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -31,17 +32,19 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
-import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -61,8 +64,12 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class DoctorsList extends AppCompatActivity {
+public class NewDoctorsList extends AppCompatActivity implements
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener,
+        LocationListener {
 
     /** STRING TO HOLD THE DETECTED CITY NAME AND LOCALITY FOR QUERYING THE DOCTORS INFORMATION **/
     private String DETECTED_CITY = null;
@@ -70,9 +77,14 @@ public class DoctorsList extends AppCompatActivity {
     private String DETECTED_LOCALITY = null;
     private String FINAL_LOCALITY_ID = null;
 
-    /* BOOLEAN TO TRACK FETCH CITY AND LOCALITY ERROR */
-    private boolean blnFetchCityError = false;
-    private boolean blnFetchLocalityError = false;
+    /** A GOOGLE API CLIENT INSTANCE **/
+    private GoogleApiClient mGoogleApiClient;
+
+    /** THE USERS CURRENT COORDINATES **/
+    private Location currentLocation;
+
+    /** PLAY SERVICE REQUEST CODE **/
+    private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 1000;
 
     /** THE LOCATION SELECTOR REQUEST CODE **/
     private final static int LOCATION_SELECTOR_REQUEST = 101;
@@ -80,15 +92,9 @@ public class DoctorsList extends AppCompatActivity {
     /** PERMISSION REQUEST CONSTANTS **/
     private static final int ACCESS_FINE_LOCATION_CONSTANT = 200;
 
-    /** A FUSED LOCATION PROVIDER CLIENT INSTANCE**/
-    private FusedLocationProviderClient mFusedLocationClient;
-
-    /** A LOCATION INSTANCE **/
-    protected Location mLastLocation;
-
-    /** THE LATLNG INSTANCES FOR CALCULATING THE DISTANCE **/
-    LatLng LATLNG_ORIGIN;
-    LatLng LATLNG_DESTINATION;
+    /* BOOLEAN TO TRACK FETCH CITY AND LOCALITY ERROR */
+    private boolean blnFetchCityError = false;
+    private boolean blnFetchLocalityError = false;
 
     /** THE DOCTORS ADAPTER AND THE ARRAY LIST **/
     private DoctorsListAdapter adapter;
@@ -114,6 +120,7 @@ public class DoctorsList extends AppCompatActivity {
 
     /** LOCATION SELECTOR **/
     @OnClick(R.id.linlaLocationSelector) void locationSelector()    {
+
         /* FETCH THE LOCATION MANUALLY */
         fetchLocationManually();
     }
@@ -124,12 +131,6 @@ public class DoctorsList extends AppCompatActivity {
         setContentView(R.layout.doctors_list);
         ButterKnife.bind(this);
 
-        /* INSTANTIATE THE LOCATION CLIENT */
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(DoctorsList.this);
-
-        /* FETCH THE USER'S LOCATION */
-        getUserLocation();
-
         /** CONFIGURE THE ACTIONBAR **/
         configAB();
 
@@ -139,8 +140,14 @@ public class DoctorsList extends AppCompatActivity {
 //        String TODAY_DAY = sdf.format(d);
 //        Log.e("TODAY", TODAY_DAY);
 
+        /** CHECK PLAY SERVICES AVAILABILITY **/
+        if (checkPlayServices()) {
+            /** CONFIGURE THE GOOGLE API CLIENT **/
+            buildGoogleApiClient();
+        }
+
         /** INSTANTIATE THE ADAPTER **/
-        adapter = new DoctorsListAdapter(DoctorsList.this, arrDoctors);
+        adapter = new DoctorsListAdapter(NewDoctorsList.this, arrDoctors);
 
         /** CONFIGURE THE RECYCLER VIEW **/
         configRecycler();
@@ -210,26 +217,16 @@ public class DoctorsList extends AppCompatActivity {
 
                                 Double latitude = Double.valueOf(clinicLatitude);
                                 Double longitude = Double.valueOf(clinicLongitude);
-                                LATLNG_DESTINATION = new LatLng(latitude, longitude);
-                                String URL_DISTANCE = getUrl(LATLNG_ORIGIN, LATLNG_DESTINATION);
-                                OkHttpClient clientDistance = new OkHttpClient();
-                                Request requestDistance = new Request.Builder()
-                                        .url(URL_DISTANCE)
-                                        .build();
-                                Call callDistance = clientDistance.newCall(requestDistance);
-                                Response respDistance = callDistance.execute();
-                                String strDistance = respDistance.body().string();
-                                JSONObject JORootDistance = new JSONObject(strDistance);
-                                JSONArray array = JORootDistance.getJSONArray("routes");
-                                JSONObject JORoutes = array.getJSONObject(0);
-                                JSONArray JOLegs= JORoutes.getJSONArray("legs");
-                                JSONObject JOSteps = JOLegs.getJSONObject(0);
-                                JSONObject JODistance = JOSteps.getJSONObject("distance");
-                                if (JODistance.has("text")) {
-                                    data.setClinicDistance(JODistance.getString("text"));
-                                } else {
-                                    data.setClinicDistance("Unknown");
-                                }
+                                Location clinicLocation = new Location("Clinic");
+                                clinicLocation.setLatitude(latitude);
+                                clinicLocation.setLongitude(longitude);
+
+                                /* CALCULATE THE DISTANCE */
+                                float distance = currentLocation.distanceTo(clinicLocation) / 1000;
+
+                                /* ROUND UP THE DISTANCE TO 3 DECIMALS */
+                                float finalDistance = roundUpDistance(distance, 2);
+                                data.setClinicDistance(String.valueOf(finalDistance));
                             } else {
                                 data.setClinicDistance("Unknown");
                             }
@@ -247,7 +244,7 @@ public class DoctorsList extends AppCompatActivity {
                             String doctorDisplayProfile = JOClinics.getString("doctorDisplayProfile");
                             data.setDoctorDisplayProfile(doctorDisplayProfile);
 
-                            /* GET THE DOCTOR'S EXPERIENCE */
+                           /* GET THE DOCTOR'S EXPERIENCE */
                             String doctorExperience = JOClinics.getString("doctorExperience");
                             data.setDoctorExperience(doctorExperience);
 
@@ -365,7 +362,7 @@ public class DoctorsList extends AppCompatActivity {
             super.onPostExecute(aVoid);
 
             /* INSTANTIATE THE DOCTORS ADAPTER */
-            adapter = new DoctorsListAdapter(DoctorsList.this, arrDoctors);
+            adapter = new DoctorsListAdapter(NewDoctorsList.this, arrDoctors);
 
             /* SET THE DOCTORS RECYCLER VIEW */
             listDoctors.setAdapter(adapter);
@@ -375,28 +372,11 @@ public class DoctorsList extends AppCompatActivity {
         }
     }
 
-    /** CREATE THE DIRECTIONS URL **/
-    private String getUrl(LatLng origin, LatLng dest) {
-
-        // Origin of route
-        String str_origin = "origin=" + origin.latitude + "," + origin.longitude;
-
-        // Destination of route
-        String str_dest = "destination=" + dest.latitude + "," + dest.longitude;
-
-        // Sensor enabled
-        String sensor = "sensor=false";
-
-        // Building the parameters to the web service
-        String parameters = str_origin + "&" + str_dest + "&" + sensor;
-
-        // Output format
-        String output = "json";
-
-//        Log.e("URL", "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters);
-
-        // Building the url to the web service
-        return "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters;
+    /** ROUND UP THE DISTANCE **/
+    private static float roundUpDistance(float d, int decimalPlace) {
+        BigDecimal bd = new BigDecimal(Float.toString(d));
+        bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+        return bd.floatValue();
     }
 
     /***** CONFIGURE THE ACTIONBAR *****/
@@ -436,6 +416,7 @@ public class DoctorsList extends AppCompatActivity {
 
             Bundle bundle = data.getExtras();
             DETECTED_LOCALITY = bundle.getString("LOCALITY_NAME");
+//            Log.e("DETECTED LOCALITY", DETECTED_LOCALITY);
 
             /* SET THE LOCATION */
             txtLocation.setText(DETECTED_LOCALITY + ", " + DETECTED_CITY);
@@ -448,6 +429,181 @@ public class DoctorsList extends AppCompatActivity {
         }
     }
 
+    /***** VERIFY GOOGLE PLAY SERVICES AVAILABLE ON THE DEVICE *****/
+    private boolean checkPlayServices() {
+        GoogleApiAvailability availability = GoogleApiAvailability.getInstance();
+        int result = availability.isGooglePlayServicesAvailable(this);
+        if (result != ConnectionResult.SUCCESS) {
+            if (availability.isUserResolvableError(result)) {
+                availability.getErrorDialog(this, result, PLAY_SERVICES_RESOLUTION_REQUEST).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "This device is not supported.", Toast.LENGTH_LONG) .show();
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /***** CREATE AND INSTANTIATE THE GOOGLE API CLIENT INSTANCE *****/
+    private synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        mGoogleApiClient.connect();
+    }
+    
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+        /* CHECK FOR PERMISSION STATUS */
+        if (ContextCompat.checkSelfPermission(NewDoctorsList.this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED)   {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION))    {
+                /** SHOW THE DIALOG **/
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setCancelable(false);
+                builder.setIcon(R.drawable.ic_info_outline_black_24dp);
+                builder.setTitle("Permission Required");
+                builder.setMessage("\nZen Pets requires the Location Permission to show you the appropriate listings near / at your location. \n\nFor a seamless experience, we recommend granting Zen Pets this permission.");
+                builder.setPositiveButton("Grant Permission", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        ActivityCompat.requestPermissions(
+                                NewDoctorsList.this,
+                                new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_CONSTANT);
+                    }
+                });
+                builder.setNegativeButton("Not Now", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        ACCESS_FINE_LOCATION_CONSTANT);
+            }
+        } else {
+            /* INSTANTIATE A LOCATION REQUEST */
+            fetchLocation();
+        }
+    }
+
+    /***** INSTANTIATE A LOCATION REQUEST *****/
+    @SuppressWarnings("MissingPermission")
+    private void fetchLocation() {
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(1000);
+        mLocationRequest.setFastestInterval(1000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == ACCESS_FINE_LOCATION_CONSTANT)   {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)    {
+                /* INSTANTIATE A LOCATION REQUEST */
+                fetchLocation();
+            } else {
+                /** SHOW THE DIALOG **/
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setCancelable(false);
+                builder.setIcon(R.drawable.ic_info_outline_black_24dp);
+                builder.setTitle("Select Location");
+                builder.setMessage("\nSince the location permission was denied, Zen Pets requires you to manually select your location to display the relevant information.\n\nThe next few screens will prompt you to select the Country, State, City and locality.");
+                builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        Intent intent = new Intent(NewDoctorsList.this, CountrySelectorActivity.class);
+                        startActivityForResult(intent, 102);
+                    }
+                });
+                builder.setNegativeButton("Nevermind", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        finish();
+                    }
+                });
+                builder.show();
+            }
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Log.e("CONNECTION FAILED", String.valueOf(connectionResult.getErrorCode()));
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        currentLocation = location;
+        currentLocation.setLatitude(location.getLatitude());
+        currentLocation.setLongitude(location.getLongitude());
+
+        Double lat = 18.5158916;
+        Double lng = 73.8351813;
+
+        Geocoder geocoder = new Geocoder(NewDoctorsList.this, Locale.getDefault());
+        try {
+            List<Address> addresses = geocoder.getFromLocation(currentLocation.getLatitude(), currentLocation.getLongitude(), 1);
+//            List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+            if (addresses.size() > 0)   {
+                DETECTED_CITY = addresses.get(0).getLocality();
+                DETECTED_LOCALITY = addresses.get(0).getSubLocality();
+//                Log.e("LOCALITY", DETECTED_LOCALITY);
+                Toast.makeText(getApplicationContext(), "LOCALITY: " + DETECTED_LOCALITY, Toast.LENGTH_LONG).show();
+
+                if (DETECTED_CITY != null)  {
+                    if (!DETECTED_CITY.equalsIgnoreCase("null")) {
+                        if (DETECTED_LOCALITY != null)  {
+                            if (!DETECTED_LOCALITY.equalsIgnoreCase("null"))   {
+                                /* GET THE CITY ID */
+                                new fetchCityID().execute();
+
+                               /* SET THE LOCATION */
+                                txtLocation.setText(DETECTED_LOCALITY + ", " + DETECTED_CITY);
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            new MaterialDialog.Builder(NewDoctorsList.this)
+                    .title("Location Error")
+                    .content("Zen pets failed to detect your location. \nClick the \"Select Manually\" button and select your current location (locality)")
+                    .positiveText("Select Manually")
+                    .onPositive(new MaterialDialog.SingleButtonCallback() {
+                        @Override
+                        public void onClick(@NonNull MaterialDialog materialDialog, @NonNull DialogAction dialogAction) {
+                            /* FETCH THE LOCATION MANUALLY */
+                            fetchLocationManually();
+                        }
+                    })
+                    .theme(Theme.LIGHT)
+                    .icon(ContextCompat.getDrawable(NewDoctorsList.this, R.drawable.ic_info_outline_black_24dp))
+                    .typeface("RobotoCondensed-Regular.ttf", "Roboto-Regular.ttf")
+                    .show();
+        }
+
+        if (mGoogleApiClient != null)   {
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+        }
+    }
 
     /** DETECT THE CITY MANUALLY **/
     private class fetchCity extends AsyncTask<Location, Void, Void>  {
@@ -460,7 +616,7 @@ public class DoctorsList extends AppCompatActivity {
 //                Log.e("LON", String.valueOf(location.getLongitude()));
 
                 try {
-                    Geocoder gcd = new Geocoder(DoctorsList.this, Locale.getDefault());
+                    Geocoder gcd = new Geocoder(NewDoctorsList.this, Locale.getDefault());
                     List<Address> addresses = gcd.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
                     if (addresses.size() > 0) {
                         DETECTED_CITY = addresses.get(0).getLocality();
@@ -478,7 +634,7 @@ public class DoctorsList extends AppCompatActivity {
             super.onPostExecute(aVoid);
 
             if (DETECTED_CITY != null)  {
-                Intent intent = new Intent(DoctorsList.this, CitySelectorActivity.class);
+                Intent intent = new Intent(NewDoctorsList.this, CitySelectorActivity.class);
                 intent.putExtra("CITY_NAME", DETECTED_CITY);
                 startActivityForResult(intent, LOCATION_SELECTOR_REQUEST);
             } else {
@@ -544,12 +700,12 @@ public class DoctorsList extends AppCompatActivity {
 
             if (blnFetchCityError)   {
                 /* SHOW THE ERROR MESSAGE */
-                new MaterialDialog.Builder(DoctorsList.this)
+                new MaterialDialog.Builder(NewDoctorsList.this)
                         .title("Location not Served!")
                         .content("There was a problem fetching Doctors near or at your current location. ")
                         .positiveText("OKAY")
                         .theme(Theme.LIGHT)
-                        .icon(ContextCompat.getDrawable(DoctorsList.this, R.drawable.ic_info_outline_black_24dp))
+                        .icon(ContextCompat.getDrawable(NewDoctorsList.this, R.drawable.ic_info_outline_black_24dp))
                         .typeface("Roboto-Medium.ttf", "Roboto-Regular.ttf")
                         .show();
             } else {
@@ -617,12 +773,12 @@ public class DoctorsList extends AppCompatActivity {
             if (blnFetchLocalityError)   {
 
                 /* SHOW THE ERROR MESSAGE */
-                new MaterialDialog.Builder(DoctorsList.this)
+                new MaterialDialog.Builder(NewDoctorsList.this)
                         .title("Location not Served!")
                         .content("There was a problem fetching Doctors near or at your current location. ")
                         .positiveText("OKAY")
                         .theme(Theme.LIGHT)
-                        .icon(ContextCompat.getDrawable(DoctorsList.this, R.drawable.ic_info_outline_black_24dp))
+                        .icon(ContextCompat.getDrawable(NewDoctorsList.this, R.drawable.ic_info_outline_black_24dp))
                         .typeface("Roboto-Medium.ttf", "Roboto-Regular.ttf")
                         .show();
             } else {
@@ -635,7 +791,7 @@ public class DoctorsList extends AppCompatActivity {
     /***** FETCH THE LOCATION MANUALLY *****/
     private void fetchLocationManually() {
         LocationHelper locationHelper = new LocationHelper();
-        locationHelper.getLocation(DoctorsList.this, new LocationHelper.LocationResult() {
+        locationHelper.getLocation(NewDoctorsList.this, new LocationHelper.LocationResult() {
             @Override
             public void gotLocation(Location location) {
                 if (location != null)   {
@@ -656,155 +812,8 @@ public class DoctorsList extends AppCompatActivity {
         listDoctors.setAdapter(adapter);
     }
 
-    /***** GET THE USER'S LOCATION *****/
-    private void getUserLocation() {
-        /* CHECK FOR PERMISSION STATUS */
-        if (ContextCompat.checkSelfPermission(DoctorsList.this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED)   {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION))    {
-                /** SHOW THE DIALOG **/
-                new MaterialDialog.Builder(this)
-                        .icon(ContextCompat.getDrawable(this, R.drawable.ic_info_outline_black_24dp))
-                        .title("Permission Required")
-                        .cancelable(true)
-                        .content("\nZen Pets requires the Location Permission to show you the appropriate listings near / at your location. \n\nFor a seamless experience, we recommend granting Zen Pets this permission.")
-                        .positiveText("Grant Permission")
-                        .negativeText("Not Now")
-                        .theme(Theme.LIGHT)
-                        .typeface("Roboto-Medium.ttf", "Roboto-Regular.ttf")
-                        .onNegative(new MaterialDialog.SingleButtonCallback() {
-                            @Override
-                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                dialog.cancel();
-                            }
-                        })
-                        .onPositive(new MaterialDialog.SingleButtonCallback() {
-                            @Override
-                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                dialog.cancel();
-                                ActivityCompat.requestPermissions(
-                                        DoctorsList.this,
-                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_CONSTANT);
-                            }
-                        }).show();
-            } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        ACCESS_FINE_LOCATION_CONSTANT);
-            }
-        } else {
-            mFusedLocationClient.getLastLocation()
-                    .addOnCompleteListener(this, new OnCompleteListener<Location>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Location> task) {
-                            if (task.isSuccessful() && task.getResult() != null) {
-                                mLastLocation = task.getResult();
-
-                                /* GET THE ORIGIN LATLNG */
-                                LATLNG_ORIGIN = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-
-                                /* FETCH THE LOCALITY USING A GEOCODER */
-                                fetchLocality();
-                            } else {
-                                Log.e("EXCEPTION", String.valueOf(task.getException()));
-                            }
-                        }
-                    });
-        }
-    }
-
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (requestCode == ACCESS_FINE_LOCATION_CONSTANT)   {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)    {
-                //noinspection MissingPermission
-                mFusedLocationClient.getLastLocation()
-                        .addOnCompleteListener(this, new OnCompleteListener<Location>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Location> task) {
-                                if (task.isSuccessful() && task.getResult() != null) {
-                                    mLastLocation = task.getResult();
-
-                                /* GET THE ORIGIN LATLNG */
-                                    LATLNG_ORIGIN = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-
-                                /* FETCH THE LOCALITY USING A GEOCODER */
-                                    fetchLocality();
-                                } else {
-                                    Log.e("EXCEPTION", String.valueOf(task.getException()));
-                                }
-                            }
-                        });
-            } else {
-                /** SHOW THE DIALOG **/
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setCancelable(false);
-                builder.setIcon(R.drawable.ic_info_outline_black_24dp);
-                builder.setTitle("Select Location");
-                builder.setMessage("\nSince the location permission was denied, Zen Pets requires you to manually select your location to display the relevant information.\n\nThe next few screens will prompt you to select the Country, State, City and locality.");
-                builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                        Intent intent = new Intent(DoctorsList.this, CountrySelectorActivity.class);
-                        startActivityForResult(intent, 102);
-                    }
-                });
-                builder.setNegativeButton("Nevermind", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                        finish();
-                    }
-                });
-                builder.show();
-            }
-        }
-    }
-
-    /***** FETCH THE LOCALITY USING A GEOCODER *****/
-    private void fetchLocality() {
-        Geocoder geocoder = new Geocoder(DoctorsList.this, Locale.getDefault());
-        try {
-            List<Address> addresses = geocoder.getFromLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 1);
-            if (addresses.size() > 0)   {
-                DETECTED_CITY = addresses.get(0).getLocality();
-                DETECTED_LOCALITY = addresses.get(0).getSubLocality();
-
-                if (DETECTED_CITY != null)  {
-                    if (!DETECTED_CITY.equalsIgnoreCase("null")) {
-                        if (DETECTED_LOCALITY != null)  {
-                            if (!DETECTED_LOCALITY.equalsIgnoreCase("null"))   {
-                                /* GET THE CITY ID */
-                                new fetchCityID().execute();
-
-                                /* SET THE LOCATION */
-                                txtLocation.setText(DETECTED_LOCALITY + ", " + DETECTED_CITY);
-                            }
-                        }
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            new MaterialDialog.Builder(DoctorsList.this)
-                    .title("Location Error")
-                    .content("Zen pets failed to detect your location. \nClick the \"Select Manually\" button and select your current location (locality)")
-                    .positiveText("Select Manually")
-                    .onPositive(new MaterialDialog.SingleButtonCallback() {
-                        @Override
-                        public void onClick(@NonNull MaterialDialog materialDialog, @NonNull DialogAction dialogAction) {
-                            /* FETCH THE LOCATION MANUALLY */
-                            fetchLocationManually();
-                        }
-                    })
-                    .theme(Theme.LIGHT)
-                    .icon(ContextCompat.getDrawable(DoctorsList.this, R.drawable.ic_info_outline_black_24dp))
-                    .typeface("RobotoCondensed-Regular.ttf", "Roboto-Regular.ttf")
-                    .show();
-        }
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

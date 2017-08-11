@@ -7,7 +7,6 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -127,7 +126,7 @@ public class VaccinationsAdapter extends RecyclerView.Adapter<VaccinationsAdapte
                                                             client.newCall(request).enqueue(new Callback() {
                                                                 @Override
                                                                 public void onFailure(Call call, IOException e) {
-                                                                    Log.e("FAILURE", e.toString());
+//                                                                    Log.e("FAILURE", e.toString());
                                                                 }
 
                                                                 @Override

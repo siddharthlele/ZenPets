@@ -36,7 +36,7 @@ import java.util.Locale;
 import biz.zenpets.users.R;
 import biz.zenpets.users.doctors.DoctorsList;
 import biz.zenpets.users.utils.AppPrefs;
-import biz.zenpets.users.utils.adapters.appointment.modifier.NewUpcomingAppointmentsAdapter;
+import biz.zenpets.users.utils.adapters.appointment.user.UpcomingAppointmentsAdapter;
 import biz.zenpets.users.utils.models.appointment.user.UpcomingAppointmentsData;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,21 +53,24 @@ public class UpcomingAppointments extends Fragment {
         return (AppPrefs) getActivity().getApplication();
     }
 
-    private FusedLocationProviderClient mFusedLocationClient;
-    protected Location mLastLocation;
-
     /** THE USER ID **/
     private String USER_ID = null;
 
     /** THE APPOINTMENT DATA **/
     private String APPOINTMENT_DATE = null;
 
+    /** A FUSED LOCATION PROVIDER CLIENT INSTANCE**/
+    private FusedLocationProviderClient mFusedLocationClient;
+
+    /** A LOCATION INSTANCE **/
+    protected Location mLastLocation;
+
     /** THE LATLNG INSTANCES FOR CALCULATING THE DISTANCE **/
     LatLng LATLNG_ORIGIN;
     LatLng LATLNG_DESTINATION;
 
     /** THE UPCOMING APPOINTMENTS ADAPTER AND ARRAY LIST **/
-    private NewUpcomingAppointmentsAdapter upcomingAppointmentsAdapter;
+    private UpcomingAppointmentsAdapter upcomingAppointmentsAdapter;
     private final ArrayList<UpcomingAppointmentsData> arrAppointments = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
@@ -126,36 +129,13 @@ public class UpcomingAppointments extends Fragment {
         USER_ID = getApp().getUserID();
         
         /* INSTANTIATE THE APPOINTMENTS ADAPTER */
-        upcomingAppointmentsAdapter = new NewUpcomingAppointmentsAdapter(getActivity(), arrAppointments);
+        upcomingAppointmentsAdapter = new UpcomingAppointmentsAdapter(getActivity(), arrAppointments);
         
         /* CONFIGURE THE RECYCLER VIEW */
         configRecycler();
-
-//        /* FETCH THE LIST OF UPCOMING APPOINTMENTS */
-//        new fetchUpcoming().execute();
     }
 
-    @SuppressWarnings("MissingPermission")
-    private void getLastLocation() {
-        mFusedLocationClient.getLastLocation()
-                .addOnCompleteListener(getActivity(), new OnCompleteListener<Location>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Location> task) {
-                        if (task.isSuccessful() && task.getResult() != null) {
-                            mLastLocation = task.getResult();
-
-                            /* GET THE ORIGIN LATLNG */
-                            LATLNG_ORIGIN = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-
-                            /* FETCH THE LIST OF UPCOMING APPOINTMENTS */
-                            new fetchUpcoming().execute();
-                        } else {
-                            Log.e("EXCEPTION", String.valueOf(task.getException()));
-                        }
-                    }
-                });
-    }
-
+    /***** FETCH THE LIST OF UPCOMING APPOINTMENTS *****/
     private class fetchUpcoming extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -196,6 +176,7 @@ public class UpcomingAppointments extends Fragment {
 
                         for (int i = 0; i < JAAppointments.length(); i++) {
                             JSONObject JOAppointments = JAAppointments.getJSONObject(i);
+                            Log.e("UPCOMING", String.valueOf(JOAppointments));
 
                             /* INSTANTIATE THE UPCOMING APPOINTMENTS DATA INSTANCE */
                             data = new UpcomingAppointmentsData();
@@ -205,13 +186,6 @@ public class UpcomingAppointments extends Fragment {
                                 data.setAppointmentID(JOAppointments.getString("appointmentID"));
                             } else {
                                 data.setAppointmentID(null);
-                            }
-
-                            /* GET THE DOCTOR ID */
-                            if (JOAppointments.has("doctorID")) {
-                                data.setDoctorID(JOAppointments.getString("doctorID"));
-                            } else {
-                                data.setDoctorID(null);
                             }
 
                             /* GET THE DOCTOR'S PREFIX */
@@ -228,32 +202,11 @@ public class UpcomingAppointments extends Fragment {
                                 data.setDoctorName(null);
                             }
 
-                            /* GET THE DOCTOR'S DISPLAY PROFILE */
-                            if (JOAppointments.has("doctorDisplayProfile")) {
-                                data.setDoctorDisplayProfile(JOAppointments.getString("doctorDisplayProfile"));
-                            } else {
-                                data.setDoctorDisplayProfile(null);
-                            }
-
-                            /* GET THE CLINIC ID */
-                            if (JOAppointments.has("clinicID")) {
-                                data.setClinicID(JOAppointments.getString("clinicID"));
-                            } else {
-                                data.setClinicID(null);
-                            }
-
                             /* GET THE CLINIC NAME */
                             if (JOAppointments.has("clinicName"))   {
                                 data.setClinicName(JOAppointments.getString("clinicName"));
                             } else {
                                 data.setClinicName(null);
-                            }
-
-                            /* GET THE CLINIC ADDRESS */
-                            if (JOAppointments.has("clinicAddress"))    {
-                                data.setClinicAddress(JOAppointments.getString("clinicAddress"));
-                            } else {
-                                data.setClinicAddress(null);
                             }
 
                             /* GET THE CITY NAME */
@@ -295,51 +248,9 @@ public class UpcomingAppointments extends Fragment {
                                 } else {
                                     data.setDistanceToClinic("N.A.");
                                 }
-                                data.setClinicLatitude(Double.valueOf(JOAppointments.getString("clinicLatitude")));
                             } else {
                                 data.setClinicLatitude(0.00);
-                            }
-
-                            /* GET THE CLINIC LONGITUDE */
-                            if (JOAppointments.has("clinicLongitude"))  {
-                                data.setClinicLongitude(Double.valueOf(JOAppointments.getString("clinicLongitude")));
-                            } else {
                                 data.setClinicLongitude(0.00);
-                            }
-
-//                            /* GET THE CLINIC LATITUDE */
-//                            if (JOAppointments.has("clinicLatitude"))   {
-//                                data.setClinicLatitude(Double.valueOf(JOAppointments.getString("clinicLatitude")));
-//                            } else {
-//                                data.setClinicLatitude(0.00);
-//                            }
-//
-//                            /* GET THE CLINIC LONGITUDE */
-//                            if (JOAppointments.has("clinicLongitude"))  {
-//                                data.setClinicLongitude(Double.valueOf(JOAppointments.getString("clinicLongitude")));
-//                            } else {
-//                                data.setClinicLongitude(0.00);
-//                            }
-
-                            /* GET THE PET ID */
-                            if (JOAppointments.has("petID"))    {
-                                data.setPetID(JOAppointments.getString("petID"));
-                            } else {
-                                data.setPetID(null);
-                            }
-
-                            /* GET THE PET NAME */
-                            if (JOAppointments.has("petName"))    {
-                                data.setPetName(JOAppointments.getString("petName"));
-                            } else {
-                                data.setPetName(null);
-                            }
-
-                            /* GET THE VISIT REASON ID */
-                            if (JOAppointments.has("visitReasonID"))    {
-                                data.setVisitReasonID(JOAppointments.getString("visitReasonID"));
-                            } else {
-                                data.setVisitReasonID(null);
                             }
 
                             /* GET THE VISIT REASON */
@@ -397,7 +308,7 @@ public class UpcomingAppointments extends Fragment {
                         });
                     }
                 } else {
-                        /* HIDE THE RECYCLER VIEW AND SHOW THE EMPTY LAYOUT */
+                    /* HIDE THE RECYCLER VIEW AND SHOW THE EMPTY LAYOUT */
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -417,7 +328,7 @@ public class UpcomingAppointments extends Fragment {
             super.onPostExecute(aVoid);
 
             /* INSTANTIATE THE APPOINTMENTS ADAPTER */
-            upcomingAppointmentsAdapter = new NewUpcomingAppointmentsAdapter(getActivity(), arrAppointments);
+            upcomingAppointmentsAdapter = new UpcomingAppointmentsAdapter(getActivity(), arrAppointments);
 
             /* SET THE ADAPTER TO THE RECYCLER VIEW */
             listUpcomingAppointments.setAdapter(upcomingAppointmentsAdapter);
@@ -488,5 +399,26 @@ public class UpcomingAppointments extends Fragment {
         listUpcomingAppointments.setLayoutManager(manager);
         listUpcomingAppointments.setHasFixedSize(true);
         listUpcomingAppointments.setAdapter(upcomingAppointmentsAdapter);
+    }
+
+    @SuppressWarnings("MissingPermission")
+    private void getLastLocation() {
+        mFusedLocationClient.getLastLocation()
+                .addOnCompleteListener(getActivity(), new OnCompleteListener<Location>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Location> task) {
+                        if (task.isSuccessful() && task.getResult() != null) {
+                            mLastLocation = task.getResult();
+
+                            /* GET THE ORIGIN LATLNG */
+                            LATLNG_ORIGIN = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+
+                            /* FETCH THE LIST OF UPCOMING APPOINTMENTS */
+                            new fetchUpcoming().execute();
+                        } else {
+                            Log.e("EXCEPTION", String.valueOf(task.getException()));
+                        }
+                    }
+                });
     }
 }

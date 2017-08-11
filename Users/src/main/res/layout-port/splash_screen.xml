@@ -20,6 +20,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/splash_title"
-        android:textColor="@color/primary"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="47sp" />
 </LinearLayout>

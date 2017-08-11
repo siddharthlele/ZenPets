@@ -9,202 +9,196 @@
         style="@style/ZenPetsCards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp">
+        android:layout_margin="5dp">
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:id="@+id/linlaAppointment"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/txtDoctorName"
-                    fontPath="fonts/Roboto-Regular.ttf"
-                    android:layout_width="0dp"
+                    android:id="@+id/txtAppointmentDate"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:gravity="start|center"
-                    android:maxLines="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
                     android:paddingBottom="5dp"
                     android:paddingEnd="11dp"
                     android:paddingLeft="11dp"
                     android:paddingRight="11dp"
                     android:paddingStart="11dp"
                     android:paddingTop="5dp"
-                    android:text="DOCTOR NAME"
-                    android:textColor="@android:color/primary_text_dark"
-                    android:textSize="16sp" />
-
-                <android.support.v7.widget.AppCompatImageView
-                    android:id="@+id/imgvwAppointmentOptions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|top"
-                    android:layout_margin="5dp"
-                    android:adjustViewBounds="true"
-                    android:background="#CCDCDCDC"
-                    android:padding="6dp"
-                    android:src="@drawable/ic_more_vert_black_24dp" />
-            </LinearLayout>
-
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/txtClinicName"
-                fontPath="fonts/Roboto-Regular.ttf"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingEnd="11dp"
-                android:paddingLeft="11dp"
-                android:paddingRight="11dp"
-                android:paddingStart="11dp"
-                android:paddingTop="5dp"
-                android:text="CLINIC NAME"
-                android:textColor="@android:color/secondary_text_dark"
-                android:textSize="14sp" />
-
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/txtClinicAddress"
-                fontPath="fonts/Roboto-Regular.ttf"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:paddingBottom="5dp"
-                android:paddingEnd="11dp"
-                android:paddingLeft="11dp"
-                android:paddingRight="11dp"
-                android:paddingStart="11dp"
-                android:paddingTop="5dp"
-                android:text="CLINIC ADDRESS"
-                android:textColor="@android:color/tertiary_text_dark"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                    android:text="DATE"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    fontPath="fonts/Roboto-Regular.ttf"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtAppointmentTime"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start|center"
-                    android:padding="5dp"
-                    android:text="STATUS:"
-                    android:textColor="@android:color/tertiary_text_dark"
-                    android:textSize="14sp" />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/txtAppointmentStatus"
-                    fontPath="fonts/Roboto-Regular.ttf"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="start|center"
-                    android:padding="5dp"
-                    android:text="APPOINTMENT STATUS"
-                    android:textColor="@android:color/secondary_text_dark"
-                    android:textSize="14sp" />
-
-                <com.mikepenz.iconics.view.IconicsImageButton
-                    android:id="@+id/imgvwStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
-                    android:adjustViewBounds="true"
-                    android:padding="11dp"
-                    app:iiv_color="@android:color/holo_blue_dark"
-                    app:iiv_icon="@string/faw_info_circle"
-                    app:iiv_size="20dp" />
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="11dp"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:paddingStart="11dp"
+                    android:paddingTop="5dp"
+                    android:text="TIME"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
-                android:layout_width="fill_parent"
-                android:layout_height="0.50dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
+                android:layout_width="0.50dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="2dp"
                 android:layout_marginTop="10dp"
-                android:background="#CC999999" />
+                android:background="@drawable/divider_bg" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingBottom="11dp"
-                android:paddingTop="6dp">
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtDoctorName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingStart="3dp"
+                    android:paddingTop="5dp"
+                    android:text="DOCTOR NAME"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtClinicName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingStart="3dp"
+                    android:paddingTop="5dp"
+                    android:text="CLINIC NAME"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtVisitReason"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingStart="3dp"
+                    android:paddingTop="5dp"
+                    android:text="VISIT REASON"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:gravity="start|center"
+                    android:orientation="horizontal">
 
                     <com.mikepenz.iconics.view.IconicsImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        app:iiv_color="@android:color/tertiary_text_dark"
-                        app:iiv_icon="faw-calendar"
-                        app:iiv_size="16dp" />
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:id="@+id/txtAppointmentDate"
-                        fontPath="fonts/Roboto-Medium.ttf"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:padding="3dp"
-                        android:text="Appointment Date"
+                        android:adjustViewBounds="true"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        app:iiv_color="@android:color/tertiary_text_dark"
+                        app:iiv_icon="@string/gmd_place"
+                        app:iiv_size="15dp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtAppointmentLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="start|center"
+                        android:maxLines="1"
+                        android:text="Appointment Location"
                         android:textColor="@android:color/secondary_text_dark"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="fill_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    android:background="#CC999999" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
 
                     <com.mikepenz.iconics.view.IconicsImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="5dp"
                         android:adjustViewBounds="true"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
                         app:iiv_color="@android:color/tertiary_text_dark"
-                        app:iiv_icon="faw-clock-o"
-                        app:iiv_size="16dp" />
+                        app:iiv_icon="cmd_tilde"
+                        app:iiv_size="15dp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        android:id="@+id/txtAppointmentTime"
-                        fontPath="fonts/Roboto-Medium.ttf"
+                        android:id="@+id/txtAppointmentDistance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:padding="3dp"
-                        android:text="Appointment Date"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="start|center"
+                        android:maxLines="1"
+                        android:text="Appointment Distance"
                         android:textColor="@android:color/secondary_text_dark"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

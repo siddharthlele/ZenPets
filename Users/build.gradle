@@ -123,12 +123,6 @@ dependencies {
     /** FOLDING CELL LISTS **/
     'com.ramotion.foldingcell:folding-cell:1.2.1'
 
-    /** FANCY DIALOGS **/
-    compile 'com.geniusforapp.fancydialog:FancyDialog:0.1.0'
-
-//    /** INFINITE VIEW PAGER **/
-//    compile 'com.github.devlight:infinitecycleviewpager:1.0.2'
-
 //    /** DIAGONAL LAYOUT **/
 //    compile 'com.github.florent37:diagonallayout:1.0.6'
 }

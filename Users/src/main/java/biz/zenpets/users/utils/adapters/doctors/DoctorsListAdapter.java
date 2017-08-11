@@ -48,31 +48,10 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
         holder.txtClinicAddress.setText(data.getClinicAddress());
 
         /* SET THE CLINIC DISTANCE FROM THE USER'S CURRENT LOCATION */
-        holder.txtDoctorDistance.setText(data.getClinicDistance() + " km");
+        holder.txtDoctorDistance.setText(data.getClinicDistance());
 
         /* SET THE DOCTOR'S NAME */
         holder.txtDoctorName.setText(data.getDoctorName());
-        
-        /* SET THE DOCTOR'S DISPLAY PROFILE */
-//        Picasso.with(activity)
-//                .load(data.getDoctorDisplayProfile())
-//                .centerCrop()
-//                .fit()
-//                .networkPolicy(NetworkPolicy.OFFLINE)
-//                .into(holder.imgvwDoctorProfile, new com.squareup.picasso.Callback() {
-//                    @Override
-//                    public void onSuccess() {
-//                    }
-//
-//                    @Override
-//                    public void onError() {
-//                        Picasso.with(activity)
-//                                .load(data.getDoctorDisplayProfile())
-//                                .centerCrop()
-//                                .fit()
-//                                .into(holder.imgvwDoctorProfile);
-//                    }
-//                });
 
         /* SET THE DOCTOR'S EXPERIENCE */
         holder.txtDoctorExp.setText(data.getDoctorExperience() + " yrs exp");
@@ -116,7 +95,6 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
 
         final LinearLayout linlaDoctorContainer;
         final AppCompatTextView txtDoctorName;
-//        final CircleImageView imgvwDoctorProfile;
         final AppCompatTextView txtDoctorLikesPercent;
         final AppCompatTextView txtDoctorLikesTotal;
         final AppCompatTextView txtClinicName;
@@ -133,7 +111,6 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
 
             linlaDoctorContainer = (LinearLayout) v.findViewById(R.id.linlaDoctorContainer);
             txtDoctorName = (AppCompatTextView) v.findViewById(R.id.txtDoctorName);
-//            imgvwDoctorProfile = (CircleImageView) v.findViewById(R.id.imgvwDoctorProfile);
             txtDoctorLikesPercent = (AppCompatTextView) v.findViewById(R.id.txtDoctorLikesPercent);
             txtDoctorLikesTotal = (AppCompatTextView) v.findViewById(R.id.txtDoctorLikesTotal);
             txtClinicName = (AppCompatTextView) v.findViewById(R.id.txtClinicName);

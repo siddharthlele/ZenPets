@@ -1,6 +1,5 @@
 package biz.zenpets.users.doctors.manual;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -41,7 +40,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CitySelectorActivity extends AppCompatActivity {
 
@@ -57,6 +55,9 @@ public class CitySelectorActivity extends AppCompatActivity {
     @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
     @BindView(R.id.listLocalities) RecyclerView listLocalities;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
+
+    /** THE SEARCH VIEW INSTANCE **/
+    SearchView searchView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -225,6 +226,7 @@ public class CitySelectorActivity extends AppCompatActivity {
             holder.txtLocalityName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    searchView.clearFocus();
                     Intent intent = new Intent();
                     intent.putExtra("LOCALITY_NAME", data.getLocalityName());
                     setResult(RESULT_OK, intent);
@@ -308,7 +310,7 @@ public class CitySelectorActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_city_selector, menu);
         MenuItem search = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(search);
+        searchView = (SearchView) MenuItemCompat.getActionView(search);
         search(searchView);
         return true;
     }
@@ -325,11 +327,12 @@ public class CitySelectorActivity extends AppCompatActivity {
         return false;
     }
 
-    private void search(SearchView searchView) {
+    private void search(final SearchView searchView) {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                return false;
+                searchView.clearFocus();
+                return true;
             }
 
             @Override
@@ -338,10 +341,5 @@ public class CitySelectorActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

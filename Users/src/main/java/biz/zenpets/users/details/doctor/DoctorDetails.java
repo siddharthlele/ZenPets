@@ -1893,46 +1893,12 @@ public class DoctorDetails extends AppCompatActivity implements SubscriptionStat
         getSupportActionBar().setSubtitle(null);
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = new MenuInflater(DoctorDetails.this);
-//        inflater.inflate(R.menu.activity_doctor_details, menu);
-//
-//        Log.e("STATUS", String.valueOf(blnSubscriptionStatus));
-//        if (blnSubscriptionStatus) {
-//            menu.findItem(R.id.menuAppointment).setVisible(true);
-//            menu.findItem(R.id.menuCall).setVisible(false);
-//        } else if (!blnSubscriptionStatus) {
-//            menu.findItem(R.id.menuAppointment).setVisible(false);
-//            menu.findItem(R.id.menuCall).setVisible(true);
-//        }
-//
-//        return super.onCreateOptionsMenu(menu);
-//    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 break;
-//            case R.id.menuFeedback:
-//                Intent intentNewFeedback = new Intent(getApplicationContext(), FeedbackCreator.class);
-//                intentNewFeedback.putExtra("DOCTOR_ID", DOCTOR_ID);
-//                intentNewFeedback.putExtra("CLINIC_ID", CLINIC_ID);
-//                startActivity(intentNewFeedback);
-//                break;
-//            case R.id.menuCall:
-//                String myData= "tel:" + DOCTOR_PHONE_NUMBER;
-//                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(myData));
-//                startActivity(intent);
-//                break;
-//            case R.id.menuAppointment:
-//                Intent intentAppointment = new Intent(getApplicationContext(), AppointmentSlotCreator.class);
-//                intentAppointment.putExtra("DOCTOR_ID", DOCTOR_ID);
-//                intentAppointment.putExtra("CLINIC_ID", CLINIC_ID);
-//                startActivityForResult(intentAppointment, REQUEST_NEW_APPOINTMENT);
-//                break;
             default:
                 break;
         }

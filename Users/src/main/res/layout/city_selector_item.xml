@@ -9,9 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:fontFamily="sans-serif-condensed"
         android:gravity="start|center"
-        android:padding="11dp"
-        android:textAppearance="?attr/textAppearanceListItem"
-        android:textColor="@android:color/secondary_text_light"
-        android:textSize="15sp" />
+        android:paddingBottom="7dp"
+        android:paddingEnd="11dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingStart="11dp"
+        android:paddingTop="7dp"
+        android:textColor="@android:color/secondary_text_dark"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+    <!--android:textAppearance="?attr/textAppearanceListItem"-->
 </LinearLayout>
