@@ -44,7 +44,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="Adoption Name"
-                        android:textColor="@android:color/primary_text_dark"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -81,7 +81,7 @@
                     android:paddingStart="11dp"
                     android:paddingTop="5dp"
                     android:text="ADOPTION DESCRIPTION"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="14sp" />
 
                 <LinearLayout
@@ -100,7 +100,7 @@
                         android:paddingRight="11dp"
                         android:paddingStart="11dp"
                         android:paddingTop="0dp"
-                        app:iiv_color="@android:color/secondary_text_dark"
+                        app:iiv_color="@android:color/secondary_text_light"
                         app:iiv_icon="@string/gmd_collections"
                         app:iiv_size="20dp" />
 
@@ -120,7 +120,7 @@
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
                         android:text="No Images Uploaded"
-                        android:textColor="@android:color/tertiary_text_dark"
+                        android:textColor="?android:textColorTertiary"
                         android:textSize="14sp"
                         android:visibility="visible" />
 
@@ -148,7 +148,7 @@
                         android:layout_height="47dp"
                         android:adjustViewBounds="true"
                         android:padding="11dp"
-                        app:iiv_color="@android:color/secondary_text_dark"
+                        app:iiv_color="@android:color/secondary_text_light"
                         app:iiv_icon="@string/faw_clock_o"
                         app:iiv_size="20dp" />
 
@@ -165,7 +165,7 @@
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
                         android:text="Time Stamp"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -206,7 +206,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="3dp"
                                 android:text="VACCINATED"
-                                android:textColor="@android:color/secondary_text_dark"
+                                android:textColor="@android:color/secondary_text_light"
                                 android:textSize="12sp" />
 
                             <android.support.v7.widget.AppCompatTextView
@@ -215,7 +215,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="3dp"
-                                android:textColor="@android:color/secondary_text_dark"
+                                android:textColor="@android:color/secondary_text_light"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -247,7 +247,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="3dp"
                                 android:text="DEWORMED"
-                                android:textColor="@android:color/secondary_text_dark"
+                                android:textColor="@android:color/secondary_text_light"
                                 android:textSize="12sp" />
 
                             <android.support.v7.widget.AppCompatTextView
@@ -256,7 +256,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="3dp"
-                                android:textColor="@android:color/secondary_text_dark"
+                                android:textColor="@android:color/secondary_text_light"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -288,7 +288,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="3dp"
                                 android:text="NEUTERED"
-                                android:textColor="@android:color/secondary_text_dark"
+                                android:textColor="@android:color/secondary_text_light"
                                 android:textSize="12sp" />
 
                             <android.support.v7.widget.AppCompatTextView
@@ -297,7 +297,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="3dp"
-                                android:textColor="@android:color/secondary_text_dark"
+                                android:textColor="@android:color/secondary_text_light"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>

@@ -1,7 +1,6 @@
 package biz.zenpets.users.details.doctor.reviews;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -50,7 +49,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DoctorReviews extends AppCompatActivity implements ReviewHelpful, ReviewNotHelpful {
 
@@ -386,11 +384,6 @@ public class DoctorReviews extends AppCompatActivity implements ReviewHelpful, R
                 break;
         }
         return false;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     /***** THE REVIEWS ADAPTER *****/

@@ -1,6 +1,5 @@
 package com.zenpets.doctors.details.doctor;
 
-import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,7 +30,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DoctorDetails extends AppCompatActivity {
 
@@ -140,10 +138,5 @@ public class DoctorDetails extends AppCompatActivity {
                 break;
         }
         return false;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

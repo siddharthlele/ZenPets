@@ -19,7 +19,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import java.util.ArrayList;
 
 import biz.zenpets.users.R;
-import biz.zenpets.users.details.pet.NewPetDetails;
 import biz.zenpets.users.details.pet.PetDetails;
 import biz.zenpets.users.utils.models.pet.PetData;
 

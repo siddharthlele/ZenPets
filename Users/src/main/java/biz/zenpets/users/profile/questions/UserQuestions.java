@@ -21,9 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import biz.zenpets.users.R;
-import biz.zenpets.users.profile.appointments.UserAppointments;
-import biz.zenpets.users.profile.appointments.modules.PastAppointments;
-import biz.zenpets.users.profile.appointments.modules.UpcomingAppointments;
 import biz.zenpets.users.profile.questions.modules.MyPrivateQuestions;
 import biz.zenpets.users.profile.questions.modules.MyPublicQuestions;
 import biz.zenpets.users.utils.TypefaceSpan;

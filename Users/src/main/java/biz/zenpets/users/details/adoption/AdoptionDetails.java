@@ -53,7 +53,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AdoptionDetails extends AppCompatActivity {
 
@@ -706,11 +705,6 @@ public class AdoptionDetails extends AppCompatActivity {
                 break;
         }
         return false;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     /***** THE ADOPTION MESSAGES ADAPTER *****/

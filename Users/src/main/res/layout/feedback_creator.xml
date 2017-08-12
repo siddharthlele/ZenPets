@@ -33,7 +33,7 @@
             android:maxLines="1"
             android:padding="11dp"
             android:text="DOCTOR NAME"
-            android:textColor="@android:color/primary_text_dark"
+            android:textColor="?android:textColorPrimary"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -64,7 +64,7 @@
                     android:layout_marginTop="5dp"
                     android:padding="11dp"
                     android:text="Would you recommend the doctor to your family and friends?"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="15sp" />
 
                 <co.ceryle.segmentedbutton.SegmentedButtonGroup
@@ -81,7 +81,7 @@
                     app:sbg_radius="2dp"
                     app:sbg_ripple="false"
                     app:sbg_selectorColor="@color/primary"
-                    app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                    app:sbg_selectorTextColor="?android:textColorPrimary">
 
                     <co.ceryle.segmentedbutton.SegmentedButton
                         android:id="@+id/btnYes"
@@ -111,7 +111,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="11dp"
                     android:text="Did your appointment start on time?"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="15sp" />
 
                 <co.ceryle.segmentedbutton.SegmentedButtonGroup
@@ -128,7 +128,7 @@
                     app:sbg_radius="2dp"
                     app:sbg_ripple="false"
                     app:sbg_selectorColor="@color/primary"
-                    app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                    app:sbg_selectorTextColor="?android:textColorPrimary">
 
                     <co.ceryle.segmentedbutton.SegmentedButton
                         android:id="@+id/btnOnTime"
@@ -178,7 +178,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="11dp"
                     android:text="For what problem / treatment did you visit the Doctor?"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="15sp" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -195,7 +195,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="11dp"
                     android:text="How was your experience with the Doctor?"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="15sp" />
 
                 <android.support.v7.widget.AppCompatEditText
@@ -212,8 +212,8 @@
                     android:maxLines="11"
                     android:minLines="6"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
-                    android:textColorHint="@android:color/secondary_text_dark"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="@android:color/secondary_text_light"
                     android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
@@ -229,7 +229,7 @@
         android:gravity="center"
         android:padding="6dp"
         android:text="By submitting the feedback, I agree to the Terms &amp; Conditions"
-        android:textColor="@android:color/primary_text_dark"
+        android:textColor="?android:textColorPrimary"
         android:textColorLink="@android:color/holo_red_dark"
         android:textSize="12sp" />
 

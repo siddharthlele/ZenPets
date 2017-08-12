@@ -23,13 +23,14 @@
             android:padding="2dp" />
 
         <android.support.v7.widget.AppCompatTextView
-            fontPath="fonts/Roboto-Regular.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
             android:gravity="start|center"
             android:padding="2dp"
             android:text="@string/common_loading"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="normal" />
     </LinearLayout>
 
     <android.support.v4.widget.NestedScrollView
@@ -71,7 +72,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="Doctor Name"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -96,7 +97,7 @@
                         android:layout_height="47dp"
                         android:adjustViewBounds="true"
                         android:padding="11dp"
-                        app:iiv_color="@android:color/secondary_text_dark"
+                        app:iiv_color="@android:color/secondary_text_light"
                         app:iiv_icon="@string/faw_calendar"
                         app:iiv_size="20dp" />
 
@@ -114,7 +115,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="Appointment Date"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="14sp"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -131,7 +132,7 @@
                         android:layout_height="47dp"
                         android:adjustViewBounds="true"
                         android:padding="11dp"
-                        app:iiv_color="@android:color/secondary_text_dark"
+                        app:iiv_color="@android:color/secondary_text_light"
                         app:iiv_icon="@string/faw_clock_o"
                         app:iiv_size="20dp" />
 
@@ -149,7 +150,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="Appointment Time"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="14sp"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -168,7 +169,7 @@
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
                     android:padding="11dp"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="@string/faw_credit_card"
                     app:iiv_size="20dp" />
 
@@ -186,7 +187,7 @@
                     android:paddingStart="11dp"
                     android:paddingTop="5dp"
                     android:text="Consultation Fees"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
@@ -196,7 +197,7 @@
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
                     android:padding="11dp"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="gmd-info"
                     app:iiv_size="20dp" />
             </LinearLayout>
@@ -214,7 +215,7 @@
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
                     android:padding="11dp"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="@string/gmd_visibility"
                     app:iiv_size="20dp" />
 
@@ -232,7 +233,7 @@
                     android:paddingStart="11dp"
                     android:paddingTop="5dp"
                     android:text="Appointment Status"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="14sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -248,7 +249,7 @@
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
                     android:padding="11dp"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="@string/faw_hospital_o"
                     app:iiv_size="20dp" />
 
@@ -272,7 +273,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="NAME"
-                        android:textColor="@android:color/primary_text_dark"
+                        android:textColor="@android:color/primary_text_light"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -289,7 +290,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="ADDRESS"
-                        android:textColor="@android:color/tertiary_text_dark"
+                        android:textColor="?android:textColorTertiary"
                         android:textSize="14sp"
                         android:textStyle="normal" />
 
@@ -323,7 +324,7 @@
                             android:paddingRight="5dp"
                             android:paddingStart="11dp"
                             android:paddingTop="5dp"
-                            app:iiv_color="@android:color/tertiary_text_dark"
+                            app:iiv_color="?android:textColorTertiary"
                             app:iiv_icon="cmd_tilde"
                             app:iiv_size="15dp" />
 
@@ -340,7 +341,7 @@
                             android:paddingStart="5dp"
                             android:paddingTop="5dp"
                             android:text="Distance"
-                            android:textColor="@android:color/primary_text_dark"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp"
                             android:textStyle="normal" />
 
@@ -377,7 +378,7 @@
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
                     android:padding="11dp"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="@string/faw_comments_o"
                     app:iiv_size="20dp" />
 
@@ -402,7 +403,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="REVIEWS"
-                        android:textColor="@android:color/tertiary_text_dark"
+                        android:textColor="?android:textColorTertiary"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -445,9 +446,9 @@
                     android:visibility="gone">
 
                     <android.support.v7.widget.AppCompatTextView
+                        style="@style/LightBold"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-light"
                         android:gravity="start|center"
                         android:paddingBottom="5dp"
                         android:paddingEnd="11dp"
@@ -456,9 +457,8 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="There are no reviews yet.."
-                        android:textColor="@android:color/secondary_text_dark"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -480,7 +480,7 @@
                     android:paddingRight="11dp"
                     android:paddingStart="11dp"
                     android:paddingTop="0dp"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="@string/gmd_collections"
                     app:iiv_size="20dp" />
 

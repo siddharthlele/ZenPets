@@ -1,6 +1,5 @@
 package biz.zenpets.users.doctors.manual;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -39,7 +38,6 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class StateSelectorActivity extends AppCompatActivity {
     
@@ -338,10 +336,5 @@ public class StateSelectorActivity extends AppCompatActivity {
         listStates.setLayoutManager(manager);
         listStates.setHasFixedSize(true);
         listStates.setAdapter(adapter);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

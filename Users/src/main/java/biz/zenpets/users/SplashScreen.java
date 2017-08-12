@@ -1,6 +1,5 @@
 package biz.zenpets.users;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,11 +11,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import biz.zenpets.users.landing.LandingActivity;
-import biz.zenpets.users.landing.NewLandingActivity;
 import biz.zenpets.users.utils.AppPrefs;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -35,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
 
         /* CONFIGURE THE ANIMATIONS */
         Animation animIn = new AlphaAnimation(0.0f, 1.0f);
-        animIn.setDuration(500);
+        animIn.setDuration(2000);
 
         /* ANIMATE THE APP NAME */
         txtAppName.startAnimation(animIn);
@@ -66,10 +63,5 @@ public class SplashScreen extends AppCompatActivity {
             public void onAnimationRepeat(Animation animation) {
             }
         });
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

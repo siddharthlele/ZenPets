@@ -1,20 +1,5 @@
 package biz.zenpets.users.utils.adapters.reviews;
 
-import android.app.Activity;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.mikepenz.iconics.view.IconicsImageView;
-
-import java.util.ArrayList;
-
-import biz.zenpets.users.R;
-import biz.zenpets.users.utils.models.reviews.ReviewsData;
-
 /*
 public class AllReviewsAdapter extends RecyclerView.Adapter<AllReviewsAdapter.ReviewsVH> {
 

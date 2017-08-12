@@ -1,7 +1,6 @@
 package biz.zenpets.users.details.questions;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -60,7 +59,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class QuestionDetails extends AppCompatActivity implements BookmarkStatus, HelpfulVotes, NotHelpfulVotes {
 
@@ -704,11 +702,6 @@ public class QuestionDetails extends AppCompatActivity implements BookmarkStatus
         listAnswers.setHasFixedSize(true);
         listAnswers.setNestedScrollingEnabled(false);
         listAnswers.setAdapter(repliesAdapter);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     /***** THE REPLIES ADAPTER *****/

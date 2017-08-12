@@ -53,7 +53,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="@string/pet_creator_type_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -77,7 +77,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="@string/pet_creator_breed_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -100,7 +100,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="@string/pet_creator_name_label"
-                android:textColorHint="@android:color/secondary_text_dark"
+                android:textColorHint="@android:color/secondary_text_light"
                 app:hintTextAppearance="@style/TextLabel">
 
                 <android.support.v7.widget.AppCompatEditText
@@ -111,7 +111,7 @@
                     android:inputType="textCapWords"
                     android:maxLines="1"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </android.support.design.widget.TextInputLayout>
@@ -127,7 +127,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="@string/pet_creator_gender_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -148,7 +148,7 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                app:sbg_selectorTextColor="?android:textColorPrimary">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnMale"
@@ -184,7 +184,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="@string/pet_creator_dob_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -206,7 +206,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:maxLines="1"
                     android:padding="11dp"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="16sp"
                     android:textStyle="normal" />
 
@@ -230,7 +230,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:text="@string/pet_creator_image_picker_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

@@ -63,7 +63,7 @@
                         android:paddingStart="10dp"
                         android:paddingTop="5dp"
                         android:text="Consultation Title"
-                        android:textColor="@android:color/primary_text_dark"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatTextView
@@ -81,7 +81,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="Consultation Description"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatTextView
@@ -98,7 +98,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="Consultation Asked For"
-                        android:textColor="@android:color/tertiary_text_dark"
+                        android:textColor="?android:textColorTertiary"
                         android:textSize="12sp" />
 
                     <View
@@ -132,7 +132,7 @@
                             android:paddingStart="10dp"
                             android:paddingTop="5dp"
                             android:text="Timestamp"
-                            android:textColor="@android:color/secondary_text_dark"
+                            android:textColor="@android:color/secondary_text_light"
                             android:textSize="13sp" />
 
                         <android.support.v7.widget.AppCompatTextView
@@ -154,7 +154,7 @@
                             android:paddingStart="10dp"
                             android:paddingTop="5dp"
                             android:text="0 Views"
-                            android:textColor="@android:color/secondary_text_dark"
+                            android:textColor="@android:color/secondary_text_light"
                             android:textSize="13sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -178,7 +178,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:text="Answers"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <LinearLayout
@@ -256,7 +256,7 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
                         android:text="There are no answers on this question yet"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>

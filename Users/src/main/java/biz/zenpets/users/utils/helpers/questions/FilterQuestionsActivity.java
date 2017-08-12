@@ -127,6 +127,7 @@ public class FilterQuestionsActivity extends AppCompatActivity {
         });
     }
 
+    /***** FETCH THE LIST OF PROBLEMS *****/
     private class fetchListOfProblems extends AsyncTask<Void, Void, Void>   {
 
         @Override

@@ -1,6 +1,5 @@
 package biz.zenpets.users.details.doctor.map;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -57,7 +56,6 @@ import biz.zenpets.users.utils.helpers.directions.DataParser;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MapDetails extends AppCompatActivity implements
         OnMapReadyCallback,
@@ -471,10 +469,5 @@ public class MapDetails extends AppCompatActivity implements
                 break;
         }
         return false;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

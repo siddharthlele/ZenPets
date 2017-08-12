@@ -12,9 +12,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
-import biz.zenpets.users.R;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-
 public class AppPrefs extends Application {
 
     /***** SHARED PREFERENCES INSTANCE *****/
@@ -37,11 +34,11 @@ public class AppPrefs extends Application {
         /* INSTANTIATE THE PREFERENCE MANAGER */
         mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        /* INSTANTIATE THE CALLIGRAPHY LIBRARY */
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Roboto-Regular.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
+//        /* INSTANTIATE THE CALLIGRAPHY LIBRARY */
+//        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+//                .setDefaultFontPath("fonts/Roboto-Regular.ttf")
+//                .setFontAttrId(R.attr.fontPath)
+//                .build());
 
         /* INSTANTIATE THE IMAGE LOADER **/
         initImageLoader(getApplicationContext());

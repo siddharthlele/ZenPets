@@ -1,7 +1,6 @@
 package biz.zenpets.users.doctors;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -64,7 +63,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class NewDoctorsList extends AppCompatActivity implements
         GoogleApiClient.ConnectionCallbacks,
@@ -810,10 +808,5 @@ public class NewDoctorsList extends AppCompatActivity implements
         listDoctors.setLayoutManager(manager);
         listDoctors.setHasFixedSize(true);
         listDoctors.setAdapter(adapter);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

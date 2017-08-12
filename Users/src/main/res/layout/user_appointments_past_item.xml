@@ -94,7 +94,7 @@
                     android:paddingStart="3dp"
                     android:paddingTop="5dp"
                     android:text="DOCTOR NAME"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -112,7 +112,7 @@
                     android:paddingStart="3dp"
                     android:paddingTop="5dp"
                     android:text="CLINIC NAME"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
                     android:paddingStart="3dp"
                     android:paddingTop="5dp"
                     android:text="VISIT REASON"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -152,7 +152,7 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
-                        app:iiv_color="@android:color/tertiary_text_dark"
+                        app:iiv_color="?android:textColorTertiary"
                         app:iiv_icon="@string/gmd_place"
                         app:iiv_size="15dp" />
 
@@ -165,7 +165,7 @@
                         android:gravity="start|center"
                         android:maxLines="1"
                         android:text="Appointment Location"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="12sp"
                         android:textStyle="normal" />
 
@@ -183,7 +183,7 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
-                        app:iiv_color="@android:color/tertiary_text_dark"
+                        app:iiv_color="?android:textColorTertiary"
                         app:iiv_icon="cmd_tilde"
                         app:iiv_size="15dp" />
 
@@ -196,7 +196,7 @@
                         android:gravity="start|center"
                         android:maxLines="1"
                         android:text="Appointment Distance"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="12sp"
                         android:textStyle="normal" />
                 </LinearLayout>

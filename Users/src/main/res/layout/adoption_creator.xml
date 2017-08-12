@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -29,7 +29,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="@string/pet_creator_type_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatSpinner
@@ -42,7 +42,7 @@
                 android:layout_marginTop="5dp" />
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -52,7 +52,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="@string/pet_creator_breed_label"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatSpinner
@@ -74,22 +74,22 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="If given, provide the Pet\'s Name"
-                android:textColorHint="@android:color/secondary_text_dark">
+                android:textColorHint="@android:color/secondary_text_light">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtPetName"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
                     android:maxLines="1"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -98,7 +98,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="Select the Pet\'s gender"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <co.ceryle.segmentedbutton.SegmentedButtonGroup
@@ -115,31 +115,33 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                app:sbg_selectorTextColor="?android:textColorTertiary">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnMale"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Male"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnFemale"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Female"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
             </co.ceryle.segmentedbutton.SegmentedButtonGroup>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -147,7 +149,7 @@
                 android:layout_marginTop="10dp"
                 android:padding="11dp"
                 android:text="Has the pet been Vaccinated? If yes, provide the details in the Description section below."
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <co.ceryle.segmentedbutton.SegmentedButtonGroup
@@ -164,31 +166,33 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                app:sbg_selectorTextColor="?android:textColorTertiary">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnVaccinatedYes"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Yes"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnVaccinatedNo"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="No"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
             </co.ceryle.segmentedbutton.SegmentedButtonGroup>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -196,7 +200,7 @@
                 android:layout_marginTop="10dp"
                 android:padding="11dp"
                 android:text="Has the pet been Dewormed?"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <co.ceryle.segmentedbutton.SegmentedButtonGroup
@@ -213,31 +217,33 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                app:sbg_selectorTextColor="?android:textColorTertiary">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnDewormedYes"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Yes"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnDewormedNo"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="No"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
             </co.ceryle.segmentedbutton.SegmentedButtonGroup>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -246,7 +252,7 @@
                 android:layout_marginTop="10dp"
                 android:padding="11dp"
                 android:text="Has the pet been Neutered?"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <co.ceryle.segmentedbutton.SegmentedButtonGroup
@@ -263,36 +269,38 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                app:sbg_selectorTextColor="?android:textColorTertiary">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/groupNeuteredYes"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="Yes" />
+                    android:text="Yes"
+                    android:textColor="#212121" />
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/groupNeuteredNo"
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/LightBold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="No"
+                    android:textColor="#212121"
                     android:textSize="15sp" />
             </co.ceryle.segmentedbutton.SegmentedButtonGroup>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="11dp"
                 android:text="Tell us something about the Pet. The more you describe the Pet, the better chances of it's being adopted."
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.design.widget.TextInputLayout
@@ -305,11 +313,11 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="Tap to start typing."
-                android:textColorHint="@android:color/secondary_text_dark">
+                android:textColorHint="@android:color/secondary_text_light">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtDescription"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -319,13 +327,12 @@
                     android:maxLines="11"
                     android:minLines="6"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
-                    android:textColorHint="@android:color/tertiary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Regular.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -335,7 +342,7 @@
                 android:gravity="start|center"
                 android:padding="11dp"
                 android:text="Add up to 4 images (optional)"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.CardView

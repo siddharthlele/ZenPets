@@ -8,11 +8,16 @@
         <item name="colorAccent">@color/primary</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
 
+        <!-- THE TEXT COLOR -->
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#323232</item>
+        <item name="android:textColorTertiary">#808080</item>
+
         <!-- CARD VIEW STYLE -->
         <item name="cardStyle">@style/ZenPetsCards</item>
 
         <!-- CALLIGRAPHY ATTRIBUTE -->
-        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->
 
         <!-- POPUP MENU STYLE -->
         <item name="popupMenuStyle">@style/myPopupMenuStyle</item>
@@ -29,8 +34,12 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
 
+        <!-- THE TEXT COLOR -->
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#757575</item>
+
         <!-- CALLIGRAPHY ATTRIBUTE -->
-        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->
     </style>
 
     <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
@@ -119,5 +128,33 @@
     <style name="TextLabel" parent="@android:style/TextAppearance">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@android:color/holo_blue_dark</item>
+    </style>
+
+    <!-- THE CONDENSED NORMAL STYLE -->
+    <style name="CondensedNormal" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <!-- THE CONDENSED BOLD STYLE -->
+    <style name="CondensedBold" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <!-- THE LIGHT NORMAL STYLE -->
+    <style name="LightNormal" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <!-- THE LIGHT BOLD STYLE -->
+    <style name="LightBold" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#212121</item>
     </style>
 </resources>

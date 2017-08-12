@@ -1,6 +1,5 @@
 package biz.zenpets.users.profile.adoptions;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -42,7 +41,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class UserAdoptions extends AppCompatActivity {
 
@@ -396,10 +394,5 @@ public class UserAdoptions extends AppCompatActivity {
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         listAdoptions.setLayoutManager(manager);
         listAdoptions.setHasFixedSize(true);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

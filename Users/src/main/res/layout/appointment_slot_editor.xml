@@ -49,7 +49,7 @@
                 android:gravity="start|center"
                 android:maxLines="1"
                 android:text="Doctor's Name"
-                android:textColor="@android:color/primary_text_dark"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -67,7 +67,7 @@
                 android:gravity="start|center"
                 android:maxLines="1"
                 android:text="Clinic Details"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
@@ -137,7 +137,7 @@
                             android:paddingEnd="2dp"
                             android:paddingRight="2dp"
                             android:text="Morning"
-                            android:textColor="@android:color/primary_text_dark"
+                            android:textColor="?android:textColorPrimary"
                             android:textSize="15sp" />
 
                         <android.support.v7.widget.AppCompatTextView
@@ -149,7 +149,7 @@
                             android:paddingLeft="2dp"
                             android:paddingStart="2dp"
                             android:text="before 12 pm"
-                            android:textColor="@android:color/secondary_text_dark"
+                            android:textColor="@android:color/secondary_text_light"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -196,7 +196,7 @@
                         android:gravity="start|center"
                         android:padding="11dp"
                         android:text="Closed"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp"
                         android:visibility="gone" />
 
@@ -232,7 +232,7 @@
                             android:paddingEnd="2dp"
                             android:paddingRight="2dp"
                             android:text="Afternoon"
-                            android:textColor="@android:color/primary_text_dark"
+                            android:textColor="?android:textColorPrimary"
                             android:textSize="15sp" />
 
                         <android.support.v7.widget.AppCompatTextView
@@ -244,7 +244,7 @@
                             android:paddingLeft="2dp"
                             android:paddingStart="2dp"
                             android:text="after 12 pm"
-                            android:textColor="@android:color/secondary_text_dark"
+                            android:textColor="@android:color/secondary_text_light"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -291,7 +291,7 @@
                         android:gravity="start|center"
                         android:padding="11dp"
                         android:text="Closed"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp"
                         android:visibility="gone" />
                 </LinearLayout>

@@ -1,7 +1,6 @@
 package biz.zenpets.users.creators.appointment;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -54,7 +53,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AppointmentSlotCreator extends AppCompatActivity {
 
@@ -1819,11 +1817,6 @@ public class AppointmentSlotCreator extends AppCompatActivity {
         listAfternoonTimes.setLayoutManager(managerAfternoon);
         listAfternoonTimes.setNestedScrollingEnabled(false);
         listAfternoonTimes.setAdapter(afternoonCreatorAdapter);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     /***** THE PRIVATE ZEN CALENDAR ADAPTER *****/

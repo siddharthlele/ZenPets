@@ -1,7 +1,6 @@
 package biz.zenpets.users.adoptions;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -59,7 +58,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AdoptionsList extends AppCompatActivity implements
         GoogleApiClient.ConnectionCallbacks,
@@ -597,10 +595,5 @@ public class AdoptionsList extends AppCompatActivity implements
         listAdoptions.setLayoutManager(manager);
         listAdoptions.setHasFixedSize(true);
         listAdoptions.setAdapter(adoptionsAdapter);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

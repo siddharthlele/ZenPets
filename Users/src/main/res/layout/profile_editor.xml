@@ -47,7 +47,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-user"
                     app:iiv_size="18dp" />
 
@@ -62,7 +62,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="Display Name"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -88,7 +88,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-envelope"
                     app:iiv_size="18dp" />
 
@@ -102,7 +102,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="Email Address"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -128,7 +128,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-phone"
                     app:iiv_size="18dp" />
 
@@ -139,7 +139,7 @@
                     android:gravity="start|center"
                     android:padding="5dp"
                     android:text="+"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />-->
 
                 <android.support.v7.widget.AppCompatEditText
@@ -153,8 +153,8 @@
                     android:inputType="phone"
                     android:maxLength="4"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
-                    android:textColorHint="@android:color/tertiary_text_dark"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="?android:textColorTertiary"
                     android:textSize="15sp" />
 
                 <View
@@ -175,8 +175,8 @@
                     android:hint="Phone Number"
                     android:inputType="phone"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
-                    android:textColorHint="@android:color/tertiary_text_dark"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="?android:textColorTertiary"
                     android:textSize="15sp" />
 
                 <!--<com.mikepenz.iconics.view.IconicsImageView
@@ -185,7 +185,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/tertiary_text_dark"
+                    app:iiv_color="?android:textColorTertiary"
                     app:iiv_icon="gmd-edit"
                     app:iiv_size="16dp" />-->
             </LinearLayout>
@@ -212,7 +212,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-map-marker"
                     app:iiv_size="18dp" />
 
@@ -229,7 +229,7 @@
                         android:gravity="start|center"
                         android:padding="11dp"
                         android:text="Select your Country"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatSpinner
@@ -246,7 +246,7 @@
                         android:gravity="start|center"
                         android:padding="11dp"
                         android:text="Select your State"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatSpinner
@@ -263,7 +263,7 @@
                         android:gravity="start|center"
                         android:padding="11dp"
                         android:text="Select the City"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatSpinner
@@ -297,7 +297,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-venus-mars"
                     app:iiv_size="18dp" />
 
@@ -316,7 +316,7 @@
                     app:sbg_radius="1dp"
                     app:sbg_ripple="false"
                     app:sbg_selectorColor="@color/primary"
-                    app:sbg_selectorTextColor="@android:color/primary_text_dark">
+                    app:sbg_selectorTextColor="?android:textColorPrimary">
 
                     <co.ceryle.segmentedbutton.SegmentedButton
                         android:id="@+id/btnMale"

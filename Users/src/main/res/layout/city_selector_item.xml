@@ -17,7 +17,7 @@
         android:paddingRight="11dp"
         android:paddingStart="11dp"
         android:paddingTop="7dp"
-        android:textColor="@android:color/secondary_text_dark"
+        android:textColor="@android:color/secondary_text_light"
         android:textSize="15sp"
         android:textStyle="normal" />
     <!--android:textAppearance="?attr/textAppearanceListItem"-->

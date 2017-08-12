@@ -67,8 +67,8 @@ dependencies {
 //    compile 'com.facebook.android:facebook-android-sdk:4.19.0'
     compile 'com.facebook.android:facebook-android-sdk:4.23.0'
 
-    /** CALLIGRAPHY **/
-    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+//    /** CALLIGRAPHY **/
+//    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
 
     /** OK HTTP **/
     compile 'com.squareup.okhttp3:okhttp:3.6.0'

@@ -30,7 +30,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:padding="11dp"
                 android:text="Select a Pet"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
@@ -58,7 +58,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:padding="11dp"
                 android:text="Select a problem type"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
@@ -86,7 +86,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="Header (min 10 chars)"
-                android:textColorHint="@android:color/secondary_text_dark"
+                android:textColorHint="@android:color/secondary_text_light"
                 app:counterEnabled="true"
                 app:counterMaxLength="25"
                 app:hintTextAppearance="@style/TextLabel">
@@ -99,7 +99,7 @@
                     android:inputType="textCapWords"
                     android:maxLines="1"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </android.support.design.widget.TextInputLayout>
@@ -116,7 +116,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="Description (min 100 chars)"
-                android:textColorHint="@android:color/secondary_text_dark"
+                android:textColorHint="@android:color/secondary_text_light"
                 app:counterEnabled="true"
                 app:counterMaxLength="1000"
                 app:hintTextAppearance="@style/TextLabel">
@@ -133,7 +133,7 @@
                     android:minLines="8"
                     android:padding="11dp"
                     android:text="This is hopefully the final test to determine if the description field still still send a null value...."
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </android.support.design.widget.TextInputLayout>
@@ -171,7 +171,7 @@
         android:fontFamily="sans-serif-light"
         android:padding="11dp"
         android:text="I understand and accept Zen Pet Consult's Terms &amp; Conditions"
-        android:textColor="@android:color/secondary_text_dark"
+        android:textColor="@android:color/secondary_text_light"
         android:textSize="14sp"
         android:textStyle="normal" />
 </LinearLayout>

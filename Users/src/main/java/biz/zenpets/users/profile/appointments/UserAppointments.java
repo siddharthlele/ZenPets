@@ -1,6 +1,5 @@
 package biz.zenpets.users.profile.appointments;
 
-import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -27,7 +26,6 @@ import biz.zenpets.users.profile.appointments.modules.UpcomingAppointments;
 import biz.zenpets.users.utils.TypefaceSpan;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class UserAppointments extends AppCompatActivity {
 

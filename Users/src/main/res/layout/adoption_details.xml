@@ -57,11 +57,11 @@
 
                             <android.support.v7.widget.AppCompatTextView
                                 android:id="@+id/txtAdoptionName"
-                                fontPath="fonts/Roboto-Regular.ttf"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
                                 android:maxLines="1"
                                 android:paddingBottom="5dp"
                                 android:paddingEnd="11dp"
@@ -70,8 +70,9 @@
                                 android:paddingStart="11dp"
                                 android:paddingTop="5dp"
                                 android:text="Adoption Name"
-                                android:textColor="@android:color/primary_text_dark"
-                                android:textSize="16sp" />
+                                android:textColor="@android:color/primary_text_light"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -97,9 +98,9 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtAdoptionDescription"
-                            fontPath="fonts/Roboto-Regular.ttf"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
                             android:paddingBottom="5dp"
                             android:paddingEnd="11dp"
                             android:paddingLeft="11dp"
@@ -107,8 +108,9 @@
                             android:paddingStart="11dp"
                             android:paddingTop="5dp"
                             android:text="ADOPTION DESCRIPTION"
-                            android:textColor="@android:color/secondary_text_dark"
-                            android:textSize="14sp" />
+                            android:textColor="@android:color/secondary_text_light"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -126,7 +128,7 @@
                                 android:paddingRight="11dp"
                                 android:paddingStart="11dp"
                                 android:paddingTop="0dp"
-                                app:iiv_color="@android:color/secondary_text_dark"
+                                app:iiv_color="@android:color/secondary_text_light"
                                 app:iiv_icon="@string/gmd_collections"
                                 app:iiv_size="20dp" />
 
@@ -146,7 +148,7 @@
                                 android:paddingStart="5dp"
                                 android:paddingTop="5dp"
                                 android:text="No Images Uploaded"
-                                android:textColor="@android:color/tertiary_text_dark"
+                                android:textColor="?android:textColorTertiary"
                                 android:textSize="14sp"
                                 android:visibility="gone" />
 
@@ -174,15 +176,15 @@
                                 android:layout_height="47dp"
                                 android:adjustViewBounds="true"
                                 android:padding="11dp"
-                                app:iiv_color="@android:color/secondary_text_dark"
+                                app:iiv_color="@android:color/secondary_text_light"
                                 app:iiv_icon="@string/faw_clock_o"
                                 app:iiv_size="20dp" />
 
                             <android.support.v7.widget.AppCompatTextView
                                 android:id="@+id/txtTimeStamp"
-                                fontPath="fonts/Roboto-Regular.ttf"
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
                                 android:gravity="start|center"
                                 android:paddingBottom="5dp"
                                 android:paddingEnd="11dp"
@@ -191,8 +193,9 @@
                                 android:paddingStart="5dp"
                                 android:paddingTop="5dp"
                                 android:text="Time Stamp"
-                                android:textColor="@android:color/secondary_text_dark"
-                                android:textSize="14sp" />
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
                         </LinearLayout>
 
                         <View
@@ -227,22 +230,24 @@
                                     android:orientation="vertical">
 
                                     <android.support.v7.widget.AppCompatTextView
-                                        fontPath="fonts/Roboto-Light.ttf"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
                                         android:padding="3dp"
                                         android:text="VACCINATED"
-                                        android:textColor="@android:color/secondary_text_dark"
-                                        android:textSize="12sp" />
+                                        android:textColor="@android:color/secondary_text_light"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
 
                                     <android.support.v7.widget.AppCompatTextView
                                         android:id="@+id/txtVaccinated"
-                                        fontPath="fonts/Roboto-Light.ttf"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
                                         android:padding="3dp"
-                                        android:textColor="@android:color/secondary_text_dark"
-                                        android:textSize="14sp" />
+                                        android:textColor="@android:color/secondary_text_light"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -268,22 +273,24 @@
                                     android:orientation="vertical">
 
                                     <android.support.v7.widget.AppCompatTextView
-                                        fontPath="fonts/Roboto-Light.ttf"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
                                         android:padding="3dp"
                                         android:text="DEWORMED"
-                                        android:textColor="@android:color/secondary_text_dark"
-                                        android:textSize="12sp" />
+                                        android:textColor="@android:color/secondary_text_light"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
 
                                     <android.support.v7.widget.AppCompatTextView
                                         android:id="@+id/txtDewormed"
-                                        fontPath="fonts/Roboto-Light.ttf"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
                                         android:padding="3dp"
-                                        android:textColor="@android:color/secondary_text_dark"
-                                        android:textSize="14sp" />
+                                        android:textColor="@android:color/secondary_text_light"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -309,22 +316,24 @@
                                     android:orientation="vertical">
 
                                     <android.support.v7.widget.AppCompatTextView
-                                        fontPath="fonts/Roboto-Light.ttf"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
                                         android:padding="3dp"
                                         android:text="NEUTERED"
-                                        android:textColor="@android:color/secondary_text_dark"
-                                        android:textSize="12sp" />
+                                        android:textColor="@android:color/secondary_text_light"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
 
                                     <android.support.v7.widget.AppCompatTextView
                                         android:id="@+id/txtNeutered"
-                                        fontPath="fonts/Roboto-Light.ttf"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
                                         android:padding="3dp"
-                                        android:textColor="@android:color/secondary_text_dark"
-                                        android:textSize="14sp" />
+                                        android:textColor="@android:color/secondary_text_light"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -333,7 +342,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Bold.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
@@ -342,6 +350,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
                 android:maxLines="2"
                 android:paddingBottom="5dp"
                 android:paddingEnd="10dp"
@@ -350,8 +359,9 @@
                 android:paddingStart="10dp"
                 android:paddingTop="5dp"
                 android:text="Messages"
-                android:textColor="@android:color/secondary_text_dark"
-                android:textSize="15sp" />
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/linlaHeaderProgress"
@@ -419,16 +429,17 @@
                         android:src="@drawable/empty_graphic" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Bariol_Bold.otf"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
                         android:text="There are no messages on this adoption listing yet"
-                        android:textColor="@android:color/secondary_text_dark"
-                        android:textSize="16sp" />
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -452,7 +463,6 @@
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/edtComment"
-                fontPath="fonts/Roboto-Regular.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -461,6 +471,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginStart="10dp"
                 android:background="@null"
+                android:fontFamily="sans-serif-condensed"
                 android:gravity="start"
                 android:hint="Type a message"
                 android:inputType="textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine"
@@ -468,7 +479,8 @@
                 android:text="still testing.."
                 android:textColor="#333333"
                 android:textColorHint="#78797d"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textStyle="normal" />
         </LinearLayout>
 
         <android.support.v7.widget.AppCompatImageButton

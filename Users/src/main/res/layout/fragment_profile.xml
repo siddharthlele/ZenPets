@@ -60,7 +60,7 @@
                 android:maxLines="1"
                 android:padding="11dp"
                 android:text="USER NAME"
-                android:textColor="@android:color/primary_text_dark"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="18sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -99,7 +99,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="gmd-pets"
                     app:iiv_size="20dp" />
 
@@ -112,7 +112,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="My Pets"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
 
                 <android.support.v7.widget.AppCompatImageView
@@ -134,7 +134,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-user-md"
                     app:iiv_size="20dp" />
 
@@ -147,7 +147,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="My Appointments"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
 
                 <android.support.v7.widget.AppCompatImageView
@@ -169,7 +169,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="gmd-forum"
                     app:iiv_size="20dp" />
 
@@ -182,7 +182,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="My Consultations"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
 
                 <android.support.v7.widget.AppCompatImageView
@@ -204,7 +204,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-clock-o"
                     app:iiv_size="20dp" />
 
@@ -217,7 +217,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="My Reminders"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
 
                 <android.support.v7.widget.AppCompatImageView
@@ -240,7 +240,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-cog"
                     app:iiv_size="20dp" />
 
@@ -253,7 +253,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="My Preferences"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
 
                 <android.support.v7.widget.AppCompatImageView
@@ -276,7 +276,7 @@
                     android:layout_width="47dp"
                     android:layout_height="47dp"
                     android:adjustViewBounds="true"
-                    app:iiv_color="@android:color/secondary_text_dark"
+                    app:iiv_color="@android:color/secondary_text_light"
                     app:iiv_icon="faw-paw"
                     app:iiv_size="20dp" />
 
@@ -289,7 +289,7 @@
                     android:gravity="start|center"
                     android:padding="11dp"
                     android:text="My Adoption Listings"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="16sp" />
 
                 <android.support.v7.widget.AppCompatImageView

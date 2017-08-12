@@ -25,7 +25,6 @@ import java.util.List;
 
 import biz.zenpets.users.R;
 import biz.zenpets.users.utils.TypefaceSpan;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AdoptionGalleryActivity extends AppCompatActivity {
 
@@ -128,10 +127,5 @@ public class AdoptionGalleryActivity extends AppCompatActivity {
                 break;
         }
         return false;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

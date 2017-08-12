@@ -96,7 +96,7 @@
                 android:padding="11dp"
                 android:text="Tap to make an appointment"
                 android:textAllCaps="false"
-                android:textColor="@android:color/primary_text_dark"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>

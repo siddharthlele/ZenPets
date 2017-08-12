@@ -53,7 +53,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="2dp"
                         android:text="USER NAME"
-                        android:textColor="@android:color/secondary_text_dark"
+                        android:textColor="@android:color/secondary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatTextView
@@ -98,7 +98,7 @@
                 android:paddingStart="11dp"
                 android:paddingTop="6dp"
                 android:text="EXPERIENCE"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -115,7 +115,7 @@
                 android:paddingStart="11dp"
                 android:paddingTop="6dp"
                 android:text="Visit Reason"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="12sp" />
 
             <LinearLayout

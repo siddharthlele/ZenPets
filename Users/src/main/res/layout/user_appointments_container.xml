@@ -16,9 +16,9 @@
         app:tabIndicatorColor="@color/accent"
         app:tabIndicatorHeight="5dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@android:color/primary_text_dark"
+        app:tabSelectedTextColor="?android:textColorPrimary"
         app:tabTextAppearance="@style/TabStyle"
-        app:tabTextColor="@android:color/secondary_text_dark" />
+        app:tabTextColor="@android:color/secondary_text_light" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"

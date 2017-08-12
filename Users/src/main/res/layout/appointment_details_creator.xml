@@ -49,7 +49,7 @@
                 android:gravity="start|center"
                 android:maxLines="1"
                 android:text="Doctor's Name"
-                android:textColor="@android:color/primary_text_dark"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -67,7 +67,7 @@
                 android:gravity="start|center"
                 android:maxLines="1"
                 android:text="Clinic Details"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
@@ -87,7 +87,7 @@
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
             android:paddingTop="11dp"
-            app:iiv_color="@android:color/secondary_text_dark"
+            app:iiv_color="@android:color/secondary_text_light"
             app:iiv_icon="@string/gmd_schedule"
             app:iiv_size="18dp" />
 
@@ -107,7 +107,7 @@
             android:paddingStart="5dp"
             android:paddingTop="11dp"
             android:text="Date and Time"
-            android:textColor="@android:color/primary_text_dark"
+            android:textColor="?android:textColorPrimary"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -132,7 +132,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textColorHint="@android:color/tertiary_text_dark">
+                android:textColorHint="?android:textColorTertiary">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtUserName"
@@ -143,7 +143,7 @@
                     android:hint="(*) Your Name"
                     android:inputType="textCapWords"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -158,7 +158,7 @@
                 android:gravity="start|center"
                 android:padding="11dp"
                 android:text="Select a Pet"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatSpinner
@@ -178,7 +178,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textColorHint="@android:color/tertiary_text_dark">
+                android:textColorHint="?android:textColorTertiary">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtEmailAddress"
@@ -189,7 +189,7 @@
                     android:hint="(*) Email Address"
                     android:inputType="textEmailAddress"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -201,7 +201,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textColorHint="@android:color/tertiary_text_dark">
+                android:textColorHint="?android:textColorTertiary">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtPhoneNumber"
@@ -212,7 +212,7 @@
                     android:hint="(*) Mobile Number"
                     android:inputType="phone"
                     android:padding="11dp"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -227,7 +227,7 @@
                 android:gravity="start|center"
                 android:padding="11dp"
                 android:text="Select the purpose of this appointment"
-                android:textColor="@android:color/secondary_text_dark"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatSpinner
@@ -253,6 +253,6 @@
         android:background="@drawable/login_button_bg"
         android:padding="11dp"
         android:text="Book"
-        android:textColor="@android:color/primary_text_dark"
+        android:textColor="?android:textColorPrimary"
         android:textSize="15sp" />
 </LinearLayout>

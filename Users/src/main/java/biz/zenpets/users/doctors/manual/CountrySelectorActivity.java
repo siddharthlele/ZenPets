@@ -1,6 +1,5 @@
 package biz.zenpets.users.doctors.manual;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -44,7 +43,6 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CountrySelectorActivity extends AppCompatActivity {
 
@@ -351,10 +349,5 @@ public class CountrySelectorActivity extends AppCompatActivity {
         listCountries.setLayoutManager(manager);
         listCountries.setHasFixedSize(true);
         listCountries.setAdapter(adapter);
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

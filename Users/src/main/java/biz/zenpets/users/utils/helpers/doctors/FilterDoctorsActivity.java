@@ -1,6 +1,5 @@
 package biz.zenpets.users.utils.helpers.doctors;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +15,6 @@ import biz.zenpets.users.utils.TypefaceSpan;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import co.ceryle.segmentedbutton.SegmentedButtonGroup;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class FilterDoctorsActivity extends AppCompatActivity {
 
@@ -72,10 +70,5 @@ public class FilterDoctorsActivity extends AppCompatActivity {
                 break;
         }
         return false;
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }
