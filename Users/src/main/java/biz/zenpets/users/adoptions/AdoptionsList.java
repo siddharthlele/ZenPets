@@ -87,7 +87,7 @@ public class AdoptionsList extends AppCompatActivity implements
 
     /** CAST THE LAYOUT ELEMENTS **/
     @BindView(R.id.txtLocation) AppCompatTextView txtLocation;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listAdoptions) RecyclerView listAdoptions;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -121,7 +121,7 @@ public class AdoptionsList extends AppCompatActivity implements
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -363,7 +363,7 @@ public class AdoptionsList extends AppCompatActivity implements
             listAdoptions.setAdapter(adoptionsAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 
@@ -513,7 +513,7 @@ public class AdoptionsList extends AppCompatActivity implements
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -569,7 +569,7 @@ public class AdoptionsList extends AppCompatActivity implements
             super.onPostExecute(aVoid);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
 
             if (blnFetchCityError)   {
                 /* SHOW THE ERROR MESSAGE */

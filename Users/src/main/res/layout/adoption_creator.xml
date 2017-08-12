@@ -84,7 +84,7 @@
                     android:inputType="textCapWords"
                     android:maxLines="1"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="16sp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -115,7 +115,7 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="?android:textColorTertiary">
+                app:sbg_selectorTextColor="@android:color/tertiary_text_light">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnMale"
@@ -166,7 +166,7 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="?android:textColorTertiary">
+                app:sbg_selectorTextColor="@android:color/tertiary_text_light">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnVaccinatedYes"
@@ -217,7 +217,7 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="?android:textColorTertiary">
+                app:sbg_selectorTextColor="@android:color/tertiary_text_light">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnDewormedYes"
@@ -269,7 +269,7 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="?android:textColorTertiary">
+                app:sbg_selectorTextColor="@android:color/tertiary_text_light">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/groupNeuteredYes"
@@ -327,7 +327,7 @@
                     android:maxLines="11"
                     android:minLines="6"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 

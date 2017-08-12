@@ -44,7 +44,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="Adoption Name"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@android:color/primary_text_light"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -120,7 +120,7 @@
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
                         android:text="No Images Uploaded"
-                        android:textColor="?android:textColorTertiary"
+                        android:textColor="@android:color/tertiary_text_light"
                         android:textSize="14sp"
                         android:visibility="visible" />
 

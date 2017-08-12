@@ -17,29 +17,7 @@
             <include layout="@layout/zen_toolbar" />
         </android.support.design.widget.AppBarLayout>
 
-        <LinearLayout
-            android:id="@+id/linlaHeaderProgress"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:visibility="gone">
-
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="2dp" />
-
-            <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Regular.ttf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:padding="2dp"
-                android:text="@string/common_loading"
-                android:textSize="16sp" />
-        </LinearLayout>
+        <include layout="@layout/zen_progress" />
 
         <FrameLayout
             android:layout_width="fill_parent"
@@ -77,7 +55,7 @@
                     android:src="@drawable/zen_pet_graphic" />
 
                 <android.support.v7.widget.AppCompatTextView
-                    fontPath="fonts/Roboto-Thin.ttf"
+                    style="@style/LightBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -85,7 +63,7 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:padding="11dp"
-                    android:text="No location found."
+                    android:text="No locations found."
                     android:textColor="@android:color/secondary_text_light"
                     android:textSize="18sp" />
             </LinearLayout>

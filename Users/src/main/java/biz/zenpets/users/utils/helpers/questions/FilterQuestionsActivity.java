@@ -50,7 +50,7 @@ public class FilterQuestionsActivity extends AppCompatActivity {
 
     /** CAST THE LAYOUT ELEMENTS **/
     @BindView(R.id.txtClear) AppCompatTextView txtClear;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listProblems) ListView listProblems;
     @BindView(R.id.btnApplyFilter) AppCompatButton btnApplyFilter;
 
@@ -135,7 +135,7 @@ public class FilterQuestionsActivity extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -193,7 +193,7 @@ public class FilterQuestionsActivity extends AppCompatActivity {
             listProblems.setAdapter(problemsAdapter);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
 
             /* GET THE INCOMING DATA (IF AVAILABLE) */
             Bundle bundle = getIntent().getExtras();

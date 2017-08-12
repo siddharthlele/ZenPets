@@ -25,29 +25,7 @@
             app:titleTextAppearance="@style/Toolbar.TitleText" />
     </android.support.v7.widget.CardView>
 
-    <LinearLayout
-        android:id="@+id/linlaHeaderProgress"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="2dp" />
-
-        <android.support.v7.widget.AppCompatTextView
-            fontPath="fonts/Roboto-Regular.ttf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="start|center"
-            android:padding="2dp"
-            android:text="@string/common_loading"
-            android:textSize="16sp" />
-    </LinearLayout>
+    <include layout="@layout/zen_progress" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -100,7 +78,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="5dp"
                         android:text="PET NAME"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@android:color/primary_text_dark"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -117,7 +95,7 @@
                         android:paddingStart="11dp"
                         android:paddingTop="2dp"
                         android:text="PET DETAILS"
-                        android:textColor="@android:color/secondary_text_light"
+                        android:textColor="@android:color/secondary_text_dark"
                         android:textSize="12sp"
                         android:textStyle="normal" />
                 </LinearLayout>
@@ -163,7 +141,7 @@
                     android:paddingStart="10dp"
                     android:paddingTop="5dp"
                     android:text="ADD NEW"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>

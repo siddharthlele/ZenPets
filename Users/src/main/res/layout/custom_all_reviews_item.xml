@@ -24,7 +24,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/txtNameStart"
-                    fontPath="fonts/Roboto-Bold.ttf"
+                    style="@style/CondensedBold"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
                     android:layout_margin="5dp"
@@ -43,7 +43,7 @@
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/txtUserName"
-                        fontPath="fonts/Roboto-Medium.ttf"
+                        style="@style/CondensedNormal"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
@@ -58,7 +58,7 @@
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/txtTimeStamp"
-                        fontPath="fonts/Roboto-Light.ttf"
+                        style="@style/CondensedBold"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
@@ -87,7 +87,7 @@
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtVisitExperience"
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedBold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
@@ -103,7 +103,7 @@
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtVisitReason"
-                fontPath="fonts/Roboto-Light.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
@@ -126,7 +126,7 @@
                 android:padding="5dp">
 
                 <android.support.v7.widget.AppCompatTextView
-                    fontPath="fonts/Roboto-Light.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -143,7 +143,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/txtHelpfulNo"
-                    fontPath="fonts/Roboto-Bold.ttf"
+                    style="@style/CondensedBold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -164,7 +164,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/txtHelpfulYes"
-                    fontPath="fonts/Roboto-Bold.ttf"
+                    style="@style/CondensedBold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"

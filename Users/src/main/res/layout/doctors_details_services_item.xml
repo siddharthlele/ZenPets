@@ -12,6 +12,6 @@
         android:gravity="start|center"
         android:padding="11dp"
         android:text="Service Name"
-        android:textColor="?android:textColorPrimary"
+        android:textColor="@android:color/primary_text_light"
         android:textSize="15sp" />
 </LinearLayout>

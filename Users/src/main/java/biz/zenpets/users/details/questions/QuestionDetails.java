@@ -88,7 +88,7 @@ public class QuestionDetails extends AppCompatActivity implements BookmarkStatus
     @BindView(R.id.txtConsultationFor) AppCompatTextView txtConsultationFor;
     @BindView(R.id.txtConsultationTimestamp) AppCompatTextView txtConsultationTimestamp;
     @BindView(R.id.txtConsultationViews) AppCompatTextView txtConsultationViews;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listAnswers) RecyclerView listAnswers;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -245,7 +245,7 @@ public class QuestionDetails extends AppCompatActivity implements BookmarkStatus
             super.onPreExecute();
 
             /** SHOW THE PROGRESS WHILE FETCHING THE DATA **/
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -442,7 +442,7 @@ public class QuestionDetails extends AppCompatActivity implements BookmarkStatus
             listAnswers.setAdapter(repliesAdapter);
 
             /** HIDE THE PROGRESS AFTER FETCHING THE DATA **/
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

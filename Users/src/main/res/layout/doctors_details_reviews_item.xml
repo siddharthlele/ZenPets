@@ -20,7 +20,7 @@
         android:paddingStart="11dp"
         android:paddingTop="5dp"
         android:text="Visit Reason"
-        android:textColor="?android:textColorPrimary"
+        android:textColor="@android:color/primary_text_light"
         android:textSize="15sp" />
 
     <android.support.v7.widget.AppCompatTextView
@@ -38,7 +38,7 @@
         android:paddingStart="11dp"
         android:paddingTop="5dp"
         android:text="Visit Experience"
-        android:textColor="?android:textColorTertiary"
+        android:textColor="@android:color/tertiary_text_light"
         android:textSize="14sp" />
 
     <LinearLayout

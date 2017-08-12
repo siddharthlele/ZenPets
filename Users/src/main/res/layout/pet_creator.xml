@@ -7,29 +7,7 @@
 
     <include layout="@layout/zen_toolbar" />
 
-    <LinearLayout
-        android:id="@+id/linlaHeaderProgress"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="2dp" />
-
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="start|center"
-            android:padding="2dp"
-            android:text="@string/common_loading"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <include layout="@layout/zen_progress" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -111,7 +89,7 @@
                     android:inputType="textCapWords"
                     android:maxLines="1"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </android.support.design.widget.TextInputLayout>
@@ -148,7 +126,7 @@
                 app:sbg_radius="2dp"
                 app:sbg_ripple="false"
                 app:sbg_selectorColor="@color/primary"
-                app:sbg_selectorTextColor="?android:textColorPrimary">
+                app:sbg_selectorTextColor="@android:color/primary_text_light">
 
                 <co.ceryle.segmentedbutton.SegmentedButton
                     android:id="@+id/btnMale"

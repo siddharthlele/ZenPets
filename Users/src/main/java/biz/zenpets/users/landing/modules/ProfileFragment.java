@@ -54,7 +54,7 @@ public class ProfileFragment extends Fragment {
     private String USER_DISPLAY_PROFILE = null;
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.imgvwProfile) CircleImageView imgvwProfile;
     @BindView(R.id.txtUserName) AppCompatTextView txtUserName;
 
@@ -140,7 +140,7 @@ public class ProfileFragment extends Fragment {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -206,7 +206,7 @@ public class ProfileFragment extends Fragment {
                     });
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

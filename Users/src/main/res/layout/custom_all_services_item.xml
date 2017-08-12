@@ -6,12 +6,14 @@
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/txtDoctorService"
+        style="@style/CondensedNormal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:gravity="start|center"
         android:padding="11dp"
-        android:textColor="?android:textColorPrimary"
+        android:text="Doctor Service"
+        android:textColor="@android:color/primary_text_light"
         android:textSize="16sp" />
 </LinearLayout>

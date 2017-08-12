@@ -25,13 +25,14 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="SUNDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -44,23 +45,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -71,36 +74,39 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtSunMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtSunAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="MONDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -113,23 +119,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -140,36 +148,39 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtMonMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtMonAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="TUESDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -182,23 +193,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -209,36 +222,39 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtTueMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtTueAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="WEDNESDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -251,23 +267,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -278,36 +296,39 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtWedMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtWedAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="THURSDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -320,23 +341,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -347,36 +370,39 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtThuMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtThuAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="FRIDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -389,23 +415,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -416,36 +444,39 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtFriMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtFriAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    style="@style/CondensedBold"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="11dp"
                     android:text="SATURDAY"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -458,23 +489,25 @@
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -485,24 +518,26 @@
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtSatMorning"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="MORNING"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/txtSatAfternoon"
+                            style="@style/CondensedNormal"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="6dp"
                             android:text="AFTERNOON"
-                            android:textColor="?android:textColorPrimary"
+                            android:textColor="@android:color/primary_text_light"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>

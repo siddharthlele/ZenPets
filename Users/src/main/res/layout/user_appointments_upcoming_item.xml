@@ -94,7 +94,7 @@
                     android:paddingStart="3dp"
                     android:paddingTop="5dp"
                     android:text="DOCTOR NAME"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -152,7 +152,7 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
-                        app:iiv_color="?android:textColorTertiary"
+                        app:iiv_color="@android:color/tertiary_text_light"
                         app:iiv_icon="@string/gmd_place"
                         app:iiv_size="15dp" />
 
@@ -183,7 +183,7 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:paddingTop="5dp"
-                        app:iiv_color="?android:textColorTertiary"
+                        app:iiv_color="@android:color/tertiary_text_light"
                         app:iiv_icon="cmd_tilde"
                         app:iiv_size="15dp" />
 
@@ -212,7 +212,7 @@
                 android:layout_marginStart="5dp"
                 android:adjustViewBounds="true"
                 android:padding="11dp"
-                app:iiv_color="?android:textColorPrimary"
+                app:iiv_color="@android:color/primary_text_light"
                 app:iiv_icon="@string/faw_ellipsis_h"
                 app:iiv_size="16dp" />
         </LinearLayout>

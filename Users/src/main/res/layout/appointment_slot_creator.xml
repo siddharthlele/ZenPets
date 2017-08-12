@@ -36,7 +36,7 @@
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtDoctorName"
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedBold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
@@ -49,12 +49,12 @@
                 android:gravity="start|center"
                 android:maxLines="1"
                 android:text="Doctor's Name"
-                android:textColor="?android:textColorPrimary"
+                android:textColor="@android:color/primary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtClinicDetails"
-                fontPath="fonts/Roboto-Regular.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -82,24 +82,6 @@
         android:persistentDrawingCache="scrolling"
         android:scrollbars="none"
         android:visibility="visible" />
-
-    <!--<noman.weekcalendar.WeekCalendar
-        android:id="@+id/weekCalendar"
-        fontPath="fonts/Roboto-Medium.ttf"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        app:daysBackgroundColor="#FCFCFC"
-        app:daysTextColor="#222222"
-        app:daysTextSize="15sp"
-        app:todaysDateBgColor="#FFA000"
-        app:weekBackgroundColor="#FCFCFC"
-        app:weekTextColor="#222222"
-        app:weekTextSize="11sp" />-->
-
-    <!--<android.support.v7.widget.CardView
-        style="@style/ZenPetsCards"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -142,24 +124,28 @@
                         app:iiv_size="20dp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Roboto-Medium.ttf"
+                        style="@style/CondensedBold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
                         android:padding="5dp"
                         android:paddingEnd="2dp"
+                        android:paddingLeft="0dp"
                         android:paddingRight="2dp"
+                        android:paddingStart="0dp"
                         android:text="Morning"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@android:color/primary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Roboto-Regular.ttf"
+                        style="@style/CondensedNormal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
                         android:padding="5dp"
+                        android:paddingEnd="0dp"
                         android:paddingLeft="2dp"
+                        android:paddingRight="0dp"
                         android:paddingStart="2dp"
                         android:text="before 12 pm"
                         android:textColor="@android:color/secondary_text_light"
@@ -181,7 +167,7 @@
                         android:padding="2dp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Roboto-Regular.ttf"
+                        style="@style/CondensedNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
@@ -203,7 +189,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/txtMorningClosed"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start|center"
@@ -237,24 +223,28 @@
                         app:iiv_size="20dp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Roboto-Medium.ttf"
+                        style="@style/CondensedBold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
                         android:padding="5dp"
                         android:paddingEnd="2dp"
+                        android:paddingLeft="0dp"
                         android:paddingRight="2dp"
+                        android:paddingStart="0dp"
                         android:text="Afternoon"
-                        android:textColor="?android:textColorPrimary"
+                        android:textColor="@android:color/primary_text_light"
                         android:textSize="15sp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Roboto-Regular.ttf"
+                        style="@style/CondensedNormal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
                         android:padding="5dp"
+                        android:paddingEnd="0dp"
                         android:paddingLeft="2dp"
+                        android:paddingRight="0dp"
                         android:paddingStart="2dp"
                         android:text="after 12 pm"
                         android:textColor="@android:color/secondary_text_light"
@@ -276,7 +266,7 @@
                         android:padding="2dp" />
 
                     <android.support.v7.widget.AppCompatTextView
-                        fontPath="fonts/Roboto-Regular.ttf"
+                        style="@style/CondensedNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start|center"
@@ -298,7 +288,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/txtAfternoonClosed"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start|center"

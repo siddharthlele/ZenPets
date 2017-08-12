@@ -105,7 +105,7 @@ public class AdoptionDetails extends AppCompatActivity {
     @BindView(R.id.txtVaccinated) AppCompatTextView txtVaccinated;
     @BindView(R.id.txtDewormed) AppCompatTextView txtDewormed;
     @BindView(R.id.txtNeutered) AppCompatTextView txtNeutered;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listMessages) RecyclerView listMessages;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
     @BindView(R.id.edtComment) AppCompatEditText edtComment;
@@ -460,7 +460,7 @@ public class AdoptionDetails extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE MESSAGES */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -577,7 +577,7 @@ public class AdoptionDetails extends AppCompatActivity {
             listMessages.setAdapter(messagesAdapter);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE MESSAGES */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

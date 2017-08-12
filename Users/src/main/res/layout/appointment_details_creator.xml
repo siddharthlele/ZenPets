@@ -36,7 +36,7 @@
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtDoctorName"
-                fontPath="fonts/Roboto-Medium.ttf"
+                style="@style/CondensedBold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
@@ -49,12 +49,12 @@
                 android:gravity="start|center"
                 android:maxLines="1"
                 android:text="Doctor's Name"
-                android:textColor="?android:textColorPrimary"
+                android:textColor="@android:color/primary_text_light"
                 android:textSize="15sp" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtClinicDetails"
-                fontPath="fonts/Roboto-Regular.ttf"
+                style="@style/CondensedNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -93,7 +93,7 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/txtDateTime"
-            fontPath="fonts/Roboto-Medium.ttf"
+            style="@style/CondensedBold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -107,7 +107,7 @@
             android:paddingStart="5dp"
             android:paddingTop="11dp"
             android:text="Date and Time"
-            android:textColor="?android:textColorPrimary"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -132,23 +132,23 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textColorHint="?android:textColorTertiary">
+                android:textColorHint="@android:color/tertiary_text_light">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtUserName"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="fill_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:gravity="start|center"
                     android:hint="(*) Your Name"
                     android:inputType="textCapWords"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Regular.ttf"
+                style="@style/CondensedBold"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -178,18 +178,18 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textColorHint="?android:textColorTertiary">
+                android:textColorHint="@android:color/tertiary_text_light">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtEmailAddress"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="fill_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:gravity="start|center"
                     android:hint="(*) Email Address"
                     android:inputType="textEmailAddress"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -201,23 +201,23 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textColorHint="?android:textColorTertiary">
+                android:textColorHint="@android:color/tertiary_text_light">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/edtPhoneNumber"
-                    fontPath="fonts/Roboto-Regular.ttf"
+                    style="@style/CondensedNormal"
                     android:layout_width="fill_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:gravity="start|center"
                     android:hint="(*) Mobile Number"
                     android:inputType="phone"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textSize="15sp" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatTextView
-                fontPath="fonts/Roboto-Regular.ttf"
+                style="@style/CondensedBold"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -243,7 +243,7 @@
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btnBook"
-        fontPath="fonts/Roboto-Regular.ttf"
+        style="@style/CondensedNormal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -253,6 +253,6 @@
         android:background="@drawable/login_button_bg"
         android:padding="11dp"
         android:text="Book"
-        android:textColor="?android:textColorPrimary"
+        android:textColor="@android:color/primary_text_light"
         android:textSize="15sp" />
 </LinearLayout>

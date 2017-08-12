@@ -105,7 +105,7 @@ public class NewDoctorsList extends AppCompatActivity implements
     /** CAST THE LAYOUT ELEMENTS **/
     @BindView(R.id.mainContent) View mLayout;
     @BindView(R.id.txtLocation) AppCompatTextView txtLocation;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
 //    @BindView(R.id.listSponsored) RecyclerView listSponsored;
     @BindView(R.id.listDoctors) RecyclerView listDoctors;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
@@ -159,7 +159,7 @@ public class NewDoctorsList extends AppCompatActivity implements
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -366,7 +366,7 @@ public class NewDoctorsList extends AppCompatActivity implements
             listDoctors.setAdapter(adapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

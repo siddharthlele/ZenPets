@@ -55,7 +55,7 @@ public class CountrySelectorActivity extends AppCompatActivity {
     private ImageLoader imageLoader;
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listCountries) RecyclerView listCountries;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -86,7 +86,7 @@ public class CountrySelectorActivity extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
 
             /* INSTANTIATE THE IMAGE LOADER INSTANCE */
             imageLoader = ImageLoader.getInstance();
@@ -186,7 +186,7 @@ public class CountrySelectorActivity extends AppCompatActivity {
             listCountries.setAdapter(adapter);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

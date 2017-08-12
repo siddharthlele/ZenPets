@@ -156,7 +156,7 @@ public class DoctorDetails extends AppCompatActivity implements SubscriptionStat
     private boolean blnSubscriptionStatus = false;
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.imgvwClinicCover) AppCompatImageView imgvwClinicCover;
     @BindView(R.id.imgvwDoctorProfile) CircleImageView imgvwDoctorProfile;
     @BindView(R.id.txtDoctorName) AppCompatTextView txtDoctorName;
@@ -344,7 +344,7 @@ public class DoctorDetails extends AppCompatActivity implements SubscriptionStat
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -698,7 +698,7 @@ public class DoctorDetails extends AppCompatActivity implements SubscriptionStat
             listClinicImages.setAdapter(imagesAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

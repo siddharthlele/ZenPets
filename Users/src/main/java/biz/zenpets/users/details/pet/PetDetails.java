@@ -67,7 +67,7 @@ public class PetDetails extends AppCompatActivity {
     private final ArrayList<VaccinationsData> arrVaccinations = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.imgvwPetProfile) CircleImageView imgvwPetProfile;
     @BindView(R.id.txtPetName) AppCompatTextView txtPetName;
     @BindView(R.id.txtPetAge) AppCompatTextView txtPetAge;
@@ -115,7 +115,7 @@ public class PetDetails extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -216,7 +216,7 @@ public class PetDetails extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -346,7 +346,7 @@ public class PetDetails extends AppCompatActivity {
             listVaccinations.setAdapter(vaccinationsAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

@@ -8,11 +8,6 @@
         <item name="colorAccent">@color/primary</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
 
-        <!-- THE TEXT COLOR -->
-        <item name="android:textColorPrimary">#212121</item>
-        <item name="android:textColorSecondary">#323232</item>
-        <item name="android:textColorTertiary">#808080</item>
-
         <!-- CARD VIEW STYLE -->
         <item name="cardStyle">@style/ZenPetsCards</item>
 
@@ -33,10 +28,6 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
-
-        <!-- THE TEXT COLOR -->
-        <item name="android:textColorPrimary">#212121</item>
-        <item name="android:textColorSecondary">#757575</item>
 
         <!-- CALLIGRAPHY ATTRIBUTE -->
         <!--<item name="fontPath">fonts/Roboto-Regular.ttf</item>-->

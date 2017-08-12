@@ -50,7 +50,7 @@ public class StateSelectorActivity extends AppCompatActivity {
     private ArrayList<StatesData> arrFilteredResults = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listStates) RecyclerView listStates;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -99,7 +99,7 @@ public class StateSelectorActivity extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -179,7 +179,7 @@ public class StateSelectorActivity extends AppCompatActivity {
             listStates.setAdapter(adapter);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

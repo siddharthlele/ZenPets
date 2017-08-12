@@ -52,7 +52,7 @@ public class ProfileDetails extends AppCompatActivity {
 //    String USER_DOB = null;
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.imgvwProfilePicture) AppCompatImageView imgvwProfilePicture;
     @BindView(R.id.txtUserName) AppCompatTextView txtUserName;
     @BindView(R.id.txtEmailAddress) AppCompatTextView txtEmailAddress;
@@ -94,7 +94,7 @@ public class ProfileDetails extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -208,7 +208,7 @@ public class ProfileDetails extends AppCompatActivity {
             txtGender.setText(USER_GENDER);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

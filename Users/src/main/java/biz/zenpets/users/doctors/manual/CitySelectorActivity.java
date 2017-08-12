@@ -52,7 +52,7 @@ public class CitySelectorActivity extends AppCompatActivity {
     private ArrayList<LocationSearchData> arrFilteredResults = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listLocalities) RecyclerView listLocalities;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -86,7 +86,7 @@ public class CitySelectorActivity extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -164,7 +164,7 @@ public class CitySelectorActivity extends AppCompatActivity {
             listLocalities.setAdapter(searchAdapter);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

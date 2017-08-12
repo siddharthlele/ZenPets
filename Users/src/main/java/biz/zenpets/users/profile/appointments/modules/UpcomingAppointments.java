@@ -74,7 +74,7 @@ public class UpcomingAppointments extends Fragment {
     private final ArrayList<UpcomingAppointmentsData> arrAppointments = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listUpcomingAppointments) RecyclerView listUpcomingAppointments;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -146,7 +146,7 @@ public class UpcomingAppointments extends Fragment {
             arrAppointments.clear();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -334,7 +334,7 @@ public class UpcomingAppointments extends Fragment {
             listUpcomingAppointments.setAdapter(upcomingAppointmentsAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

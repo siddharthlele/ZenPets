@@ -61,7 +61,7 @@ public class UserPets extends AppCompatActivity {
     private final ArrayList<PetData> arrPets = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listPets) RecyclerView listPets;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -105,7 +105,7 @@ public class UserPets extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -282,7 +282,7 @@ public class UserPets extends AppCompatActivity {
             listPets.setAdapter(petsAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

@@ -60,7 +60,7 @@ public class MyPublicQuestions extends Fragment {
 
     /** CAST THE LAYOUT ELEMENTS **/
     @BindView(R.id.txtFilter) AppCompatTextView txtFilter;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listMyConsultations) RecyclerView listMyConsultations;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -140,7 +140,7 @@ public class MyPublicQuestions extends Fragment {
             arrQuestions.clear();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -243,7 +243,7 @@ public class MyPublicQuestions extends Fragment {
                                 linlaEmpty.setVisibility(View.GONE);
 
                                 /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-                                linlaHeaderProgress.setVisibility(View.GONE);
+                                linlaProgress.setVisibility(View.GONE);
                             }
                         });
                     } else {
@@ -255,7 +255,7 @@ public class MyPublicQuestions extends Fragment {
                                 listMyConsultations.setVisibility(View.GONE);
 
                                 /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-                                linlaHeaderProgress.setVisibility(View.GONE);
+                                linlaProgress.setVisibility(View.GONE);
                             }
                         });
                     }
@@ -268,7 +268,7 @@ public class MyPublicQuestions extends Fragment {
                             listMyConsultations.setVisibility(View.GONE);
 
                             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-                            linlaHeaderProgress.setVisibility(View.GONE);
+                            linlaProgress.setVisibility(View.GONE);
                         }
                     });
                 }
@@ -289,7 +289,7 @@ public class MyPublicQuestions extends Fragment {
             listMyConsultations.setAdapter(questionsAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

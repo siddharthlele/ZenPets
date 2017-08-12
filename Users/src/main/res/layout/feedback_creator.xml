@@ -33,7 +33,7 @@
             android:maxLines="1"
             android:padding="11dp"
             android:text="DOCTOR NAME"
-            android:textColor="?android:textColorPrimary"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -81,7 +81,7 @@
                     app:sbg_radius="2dp"
                     app:sbg_ripple="false"
                     app:sbg_selectorColor="@color/primary"
-                    app:sbg_selectorTextColor="?android:textColorPrimary">
+                    app:sbg_selectorTextColor="@android:color/primary_text_light">
 
                     <co.ceryle.segmentedbutton.SegmentedButton
                         android:id="@+id/btnYes"
@@ -128,7 +128,7 @@
                     app:sbg_radius="2dp"
                     app:sbg_ripple="false"
                     app:sbg_selectorColor="@color/primary"
-                    app:sbg_selectorTextColor="?android:textColorPrimary">
+                    app:sbg_selectorTextColor="@android:color/primary_text_light">
 
                     <co.ceryle.segmentedbutton.SegmentedButton
                         android:id="@+id/btnOnTime"
@@ -212,7 +212,7 @@
                     android:maxLines="11"
                     android:minLines="6"
                     android:padding="11dp"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@android:color/primary_text_light"
                     android:textColorHint="@android:color/secondary_text_light"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -229,7 +229,7 @@
         android:gravity="center"
         android:padding="6dp"
         android:text="By submitting the feedback, I agree to the Terms &amp; Conditions"
-        android:textColor="?android:textColorPrimary"
+        android:textColor="@android:color/primary_text_light"
         android:textColorLink="@android:color/holo_red_dark"
         android:textSize="12sp" />
 

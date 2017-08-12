@@ -25,7 +25,7 @@
             android:paddingStart="15dp"
             android:paddingTop="2dp"
             android:text="S"
-            android:textColor="?android:textColorPrimary"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="12sp" />
 
         <android.support.v7.widget.AppCompatTextView
@@ -36,7 +36,7 @@
             android:background="@drawable/circular_btn_bg"
             android:padding="11dp"
             android:text="11"
-            android:textColor="?android:textColorPrimary"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

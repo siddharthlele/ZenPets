@@ -114,7 +114,7 @@ public class PetCreator extends AppCompatActivity implements DatePickerDialog.On
     private final ArrayList<BreedsData> arrBreeds = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.spnPetTypes) AppCompatSpinner spnPetTypes;
     @BindView(R.id.spnBreeds) AppCompatSpinner spnBreeds;
     @BindView(R.id.inputPetName) TextInputLayout inputPetName;

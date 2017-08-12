@@ -120,7 +120,7 @@ public class AppointmentDetails extends AppCompatActivity {
     private final ArrayList<ClinicImagesData> arrImages = new ArrayList<>();
 
     /** CAST THE LAYOUT ELEMENTS **/
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.imgvwDoctorProfile) CircleImageView imgvwDoctorProfile;
     @BindView(R.id.txtDoctorName) AppCompatTextView txtDoctorName;
     @BindView(R.id.txtAppointmentDate) AppCompatTextView txtAppointmentDate;
@@ -192,7 +192,7 @@ public class AppointmentDetails extends AppCompatActivity {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -525,7 +525,7 @@ public class AppointmentDetails extends AppCompatActivity {
                 txtDistance.setText(CLINIC_DISTANCE);
 
             /* HIDE THE PROGRESS AFTER FETCHING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 
@@ -754,7 +754,7 @@ public class AppointmentDetails extends AppCompatActivity {
             listClinicImages.setAdapter(imagesAdapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

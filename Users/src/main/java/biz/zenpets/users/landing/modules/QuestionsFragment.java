@@ -57,7 +57,7 @@ public class QuestionsFragment extends Fragment {
 
     /** CAST THE LAYOUT ELEMENTS **/
     @BindView(R.id.txtFilter) AppCompatTextView txtFilter;
-    @BindView(R.id.linlaHeaderProgress) LinearLayout linlaHeaderProgress;
+    @BindView(R.id.linlaProgress) LinearLayout linlaProgress;
     @BindView(R.id.listConsult) RecyclerView listConsult;
     @BindView(R.id.linlaEmpty) LinearLayout linlaEmpty;
 
@@ -126,7 +126,7 @@ public class QuestionsFragment extends Fragment {
             super.onPreExecute();
 
             /* SHOW THE PROGRESS WHILE LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.VISIBLE);
+            linlaProgress.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -265,7 +265,7 @@ public class QuestionsFragment extends Fragment {
             listConsult.setAdapter(adapter);
 
             /* HIDE THE PROGRESS AFTER LOADING THE DATA */
-            linlaHeaderProgress.setVisibility(View.GONE);
+            linlaProgress.setVisibility(View.GONE);
         }
     }
 

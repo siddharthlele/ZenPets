@@ -6,10 +6,10 @@
 
     <TextView
         android:id="@+id/txtLocalityName"
+        style="@style/CondensedNormal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:fontFamily="sans-serif-condensed"
         android:gravity="start|center"
         android:paddingBottom="7dp"
         android:paddingEnd="11dp"
@@ -17,8 +17,8 @@
         android:paddingRight="11dp"
         android:paddingStart="11dp"
         android:paddingTop="7dp"
-        android:textColor="@android:color/secondary_text_light"
-        android:textSize="15sp"
-        android:textStyle="normal" />
+        android:text="Locality Name"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="15sp" />
     <!--android:textAppearance="?attr/textAppearanceListItem"-->
 </LinearLayout>
